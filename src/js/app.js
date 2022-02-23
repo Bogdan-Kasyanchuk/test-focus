@@ -1,3 +1,3 @@
-import { isWebp } from './modules/isWebP.js'
+import { isWebp } from './modules/isWebP';
 
-isWebp()
+isWebp();

@@ -1,5 +1,5 @@
-import svgmin from 'gulp-svgmin'
-import svgSprite from 'gulp-svg-sprite'
+import svgmin from 'gulp-svgmin';
+import svgSprite from 'gulp-svg-sprite';
 
 export const sprite = () => {
   return app.gulp
@@ -21,5 +21,5 @@ export const sprite = () => {
         },
       }),
     )
-    .pipe(app.gulp.dest(`${app.path.build.images}`))
-}
+    .pipe(app.gulp.dest(`${app.path.build.images}`));
+};
