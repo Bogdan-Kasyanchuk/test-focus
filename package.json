@@ -22,6 +22,9 @@
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "eslint-config-prettier": "^8.4.0",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -41,6 +44,8 @@
     "gulp-webp": "^4.0.1",
     "gulp-webp-html-nosvg": "^1.0.5",
     "gulp-webpcss": "^1.1.1",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "webp-converter": "2.2.3",
     "webpack": "^5.69.1",

@@ -1,8 +1,8 @@
-import fileInclude from 'gulp-file-include'
-import typograf from 'gulp-typograf'
-import webpHtmlNosvg from 'gulp-webp-html-nosvg'
-import versionNumber from 'gulp-version-number'
-import htmlMin from 'gulp-htmlmin'
+import fileInclude from 'gulp-file-include';
+import typograf from 'gulp-typograf';
+import webpHtmlNosvg from 'gulp-webp-html-nosvg';
+import versionNumber from 'gulp-version-number';
+import htmlMin from 'gulp-htmlmin';
 
 export const html = () => {
   return app.gulp
@@ -33,5 +33,5 @@ export const html = () => {
     )
     .pipe(app.plugins.if(app.isBuild, htmlMin({ collapseWhitespace: true })))
     .pipe(app.gulp.dest(app.path.build.html))
-    .pipe(app.plugins.browsersync.stream())
-}
+    .pipe(app.plugins.browsersync.stream());
+};

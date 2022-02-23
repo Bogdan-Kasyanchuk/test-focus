@@ -1,4 +1,4 @@
-import webpack from 'webpack-stream'
+import webpack from 'webpack-stream';
 
 export const js = () => {
   return app.gulp
@@ -12,5 +12,5 @@ export const js = () => {
       }),
     )
     .pipe(app.gulp.dest(app.path.build.js))
-    .pipe(app.plugins.browsersync.stream())
-}
+    .pipe(app.plugins.browsersync.stream());
+};

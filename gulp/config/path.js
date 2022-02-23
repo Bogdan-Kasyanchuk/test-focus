@@ -1,8 +1,9 @@
-import * as nodePath from 'path'
-const rootFolder = nodePath.basename(nodePath.resolve())
+import * as nodePath from 'path';
 
-const buildFolder = './dist'
-const srcFolder = './src'
+const rootFolder = nodePath.basename(nodePath.resolve());
+
+const buildFolder = './dist';
+const srcFolder = './src';
 
 export const path = {
   build: {
@@ -29,7 +30,7 @@ export const path = {
     files: `${srcFolder}/files/**/*.*`,
   },
   clean: buildFolder,
-  buildFolder: buildFolder,
-  srcFolder: srcFolder,
-  rootFolder: rootFolder,
-}
+  buildFolder,
+  srcFolder,
+  rootFolder,
+};
