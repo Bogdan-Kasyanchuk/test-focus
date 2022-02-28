@@ -7,7 +7,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build",
-    "sprite": "gulp sprite"
+    "sprite": "gulp sprite",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -45,10 +46,14 @@
     "gulp-webp-html-nosvg": "^1.0.5",
     "gulp-webpcss": "^1.1.1",
     "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
     "prettier": "^2.5.1",
     "sass": "^1.49.8",
     "webp-converter": "2.2.3",
     "webpack": "^5.69.1",
     "webpack-stream": "^7.0.0"
+  },
+  "lint-staged": {
+    "*.js": "eslint"
   }
 }
