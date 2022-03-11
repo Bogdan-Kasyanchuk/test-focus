@@ -1,5 +1,17 @@
 @mixin desktop {
-  @media screen and (max-width: ($desktop)) {
+  @media screen and (min-width: ($desktop)) {
+    @content;
+  }
+}
+
+@mixin max-small-desktop {
+  @media screen and (max-width: ($max-small-desktop)) {
+    @content;
+  }
+}
+
+@mixin min-small-desktop {
+  @media screen and (min-width: ($min-small-desktop)) {
     @content;
   }
 }
@@ -11,7 +23,7 @@
 }
 
 @mixin min-tablet {
-  @media screen and (max-width: ($min-tablet)) {
+  @media screen and (min-width: ($min-tablet)) {
     @content;
   }
 }

@@ -1,8 +1,9 @@
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import './fonts';
+
 @import './utils/breakpoints';
 @import './utils/visually-hidden';
 @import './utils/variables';
-@import './utils/fonts';
-@import './utils/colors';
 @import './mixins/breakpoint';
 @import './mixins/mini';
 @import './base/base';
@@ -29,3 +30,6 @@
 @import './layout/world';
 @import './layout/advertising';
 @import './layout/footer';
+
+@import './carousel-popular';
+@import './carousel-ratings';
