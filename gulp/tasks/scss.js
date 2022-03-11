@@ -35,6 +35,6 @@ export const scss = () => {
     )
     .pipe(app.plugins.if(app.isBuild, cleanCss()))
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(app.gulp.dest(app.path.build.css))
+    .pipe(app.gulp.dest(app.path.build.css, { sourcemaps: app.isDev }))
     .pipe(app.plugins.browsersync.stream());
 };

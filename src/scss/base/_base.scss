@@ -8,8 +8,7 @@ html {
 }
 
 body {
-  height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'CeraPro';
 }
 
 h1,
@@ -23,7 +22,6 @@ h6 {
   line-height: inherit;
 }
 
-picture,
 img {
   display: block;
   height: auto;
@@ -40,4 +38,8 @@ select {
 
 button {
   cursor: pointer;
+}
+
+a {
+  display: block;
 }

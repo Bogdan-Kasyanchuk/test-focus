@@ -11,6 +11,6 @@ export const js = () => {
         },
       }),
     )
-    .pipe(app.gulp.dest(app.path.build.js))
+    .pipe(app.gulp.dest(app.path.build.js, { sourcemaps: app.isDev }))
     .pipe(app.plugins.browsersync.stream());
 };

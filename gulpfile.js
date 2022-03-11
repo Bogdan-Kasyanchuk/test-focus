@@ -9,8 +9,8 @@ import { images } from './gulp/tasks/images.js';
 import { reset } from './gulp/tasks/reset.js';
 import { server } from './gulp/tasks/server.js';
 import { sprite } from './gulp/tasks/sprite.js';
-
-export { sprite };
+import { otfToTtf, ttfToWoff, fontsStyle } from './gulp/tasks/fonts.js';
+import { zip } from './gulp/tasks/zip.js';
 
 global.app = {
   isBuild: process.argv.includes('--build'),
@@ -26,13 +26,20 @@ function watcher() {
   gulp.watch(path.watch.scss, scss);
   gulp.watch(path.watch.js, js);
   gulp.watch(path.watch.images, images);
+  gulp.watch(path.watch.svgicons, sprite);
 }
 
-const mainTasks = gulp.parallel(copy, html, scss, js, images);
+const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
+
+const mainTasks = gulp.parallel(
+  fonts,
+  gulp.parallel(copy, html, scss, js, images, sprite),
+);
 
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server));
 const build = gulp.series(reset, mainTasks);
+const deployZip = gulp.series(reset, mainTasks, zip);
 
-export { dev, build };
+export { dev, build, deployZip };
 
 gulp.task('default', dev);

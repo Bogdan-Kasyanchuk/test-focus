@@ -1,4 +1,4 @@
-.container {
+.my-container {
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
@@ -10,8 +10,12 @@
 
   @include min-tablet {
     width: $min-tablet;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: 38px;
+    padding-right: 38px;
+  }
+
+  @include min-small-desktop {
+    width: $min-small-desktop;
   }
 
   @include desktop {
