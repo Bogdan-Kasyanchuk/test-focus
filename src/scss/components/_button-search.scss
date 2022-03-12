@@ -1,0 +1,15 @@
+.c-button-search {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  color: #000;
+
+  &:hover,
+  &:focus-visible {
+    color: #ed3237;
+  }
+}
+
+.c-button-search__icon {
+  fill: currentColor;
+}
