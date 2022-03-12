@@ -1,21 +1,24 @@
-@import '../../node_modules/bootstrap/scss/bootstrap';
+// @import '../../node_modules/bootstrap/scss/bootstrap';
 @import './fonts';
 
 @import './utils/breakpoints';
 @import './utils/visually-hidden';
 @import './utils/variables';
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './mixins/breakpoint';
 @import './mixins/mini';
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './base/base';
 @import './base/reset';
 @import './base/container';
-// @import './components/theme-switch';
-// @import './components/loader';
-// @import './components/logo';
-// @import './components/form';
-// @import './components/button';
-// @import './components/photo-card';
-// @import './components/up-button';
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
+@import './components/button-burger';
+@import './components/logo';
+@import './components/menu-header';
+@import './components/language';
+@import './components/button-search';
+@import './components/search';
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './layout/header';
 @import './layout/hero';
 @import './layout/categories';
@@ -31,5 +34,5 @@
 @import './layout/advertising';
 @import './layout/footer';
 
-@import './carousel-popular';
-@import './carousel-ratings';
+// @import './carousel-popular';
+// @import './carousel-ratings';

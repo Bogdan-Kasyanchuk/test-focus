@@ -1,25 +1,10 @@
-html,
-body {
-  height: 100%;
-}
-
 html {
+  height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'CeraPro';
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: inherit;
-  font-size: inherit;
-  line-height: inherit;
 }
 
 img {
@@ -29,14 +14,8 @@ img {
   object-fit: cover;
 }
 
-input,
-button,
-textarea,
-select {
-  font-family: inherit;
-}
-
 button {
+  line-height: 0;
   cursor: pointer;
 }
 
