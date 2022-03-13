@@ -1,0 +1,51 @@
+.c-card-1 {
+  height: 400px;
+  position: relative;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.c-card-1__link-category {
+  position: absolute;
+  left: 16px;
+  top: 214px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #000;
+  padding: 6px 14px;
+  z-index: 11;
+}
+
+.c-card-1__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.c-card-1__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 140px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.c-card-1__title {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.c-card-1__time {
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+  opacity: 0.5;
+}

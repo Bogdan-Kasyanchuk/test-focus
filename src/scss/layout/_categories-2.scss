@@ -1,0 +1,21 @@
+.categories-2 {
+  padding-top: 26px;
+  padding-bottom: 26px;
+}
+
+.categories-2__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
+}
+
+.categories-2__item {
+  @include min-tablet {
+    &:first-child {
+      grid-column: 1 / span 2;
+    }
+  }
+}
