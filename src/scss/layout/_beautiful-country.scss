@@ -1,0 +1,17 @@
+.beautiful-country {
+  padding-top: 50px;
+  padding-bottom: 26px;
+}
+
+.beautiful-country__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
+}
+
+.beautiful-country__title {
+  margin-bottom: 32px;
+}
