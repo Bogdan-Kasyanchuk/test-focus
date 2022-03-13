@@ -3,8 +3,7 @@
   top: 0;
   z-index: 1000;
   width: 100%;
-  // border-bottom: 1px solid #f8f8f8;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #e5e5e5;
   padding-top: 18px;
   padding-bottom: 18px;
   background-color: #fff;
@@ -43,7 +42,7 @@
   }
 }
 
-.header__menu-header {
+.header__menu {
   margin-right: auto;
 
   @include max-tablet {

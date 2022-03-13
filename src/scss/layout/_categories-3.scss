@@ -1,0 +1,13 @@
+.categories-3 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.categories-3__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
+}

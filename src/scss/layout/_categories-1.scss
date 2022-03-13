@@ -1,0 +1,14 @@
+.categories-1 {
+  padding-top: 20px;
+  padding-top: 77px;
+  padding-bottom: 20px;
+}
+
+.categories-1__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  justify-content: center;
+  grid-template-rows: auto;
+  grid-column-gap: 24px;
+  grid-row-gap: 30px;
+}
