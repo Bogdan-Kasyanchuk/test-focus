@@ -1,0 +1,65 @@
+.c-card-8 {
+  height: 400px;
+  position: relative;
+
+  @include max-mobile {
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  @media screen and (min-width: $min-small-desktop) and (max-width: $max-small-desktop) {
+    border-bottom: 1px solid #e5e5e5;
+  }
+}
+
+.c-card-8__link-category {
+  position: absolute;
+  left: 16px;
+  top: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #000;
+  background-color: #fff;
+  padding: 6px 14px;
+  z-index: 11;
+}
+
+.c-card-8__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.c-card-8__title {
+  position: absolute;
+  top: 260px;
+  left: 14px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.25;
+  width: 400px;
+
+  @include max-mobile {
+    position: static;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #000;
+    width: 100%;
+  }
+
+  @media screen and (min-width: $min-small-desktop) and (max-width: $max-small-desktop) {
+    position: static;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #000;
+    width: 100%;
+  }
+}

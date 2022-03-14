@@ -14,4 +14,8 @@
 
 .beautiful-country__title {
   margin-bottom: 32px;
+
+  @include max-mobile {
+    text-align: center;
+  }
 }
