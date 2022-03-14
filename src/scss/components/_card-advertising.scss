@@ -1,0 +1,13 @@
+.c-card-advertising {
+  background-color: #f4f4f4;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+.c-card-advertising__link {
+  @include max-mobile {
+    width: 330px;
+  }
+}

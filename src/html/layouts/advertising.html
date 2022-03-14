@@ -1,56 +1,63 @@
-<section>
-  <div class="my-container">
-    <h2>Реклама</h2>
-    <article>
-      <a href="#"></a>
-      <ul>
-        <li>
-          <picture>
-            <source
-              srcset="
-                @img/advertising/1x/1x-okko.webp 1x,
-                @img/advertising/2x/2x-okko.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
-                @img/advertising/1x/1x-okko.jpg 1x,
-                @img/advertising/2x/2x-okko.jpg 2x
-              "
-            />
-            <img
-              src="@img/advertising/1x/1x-okko.jpg"
-              alt="okko"
-              width="220"
-              height="212"
-            />
-          </picture>
-        </li>
-        <li>
-          <picture>
-            <source
-              srcset="
-                @img/advertising/1x/1x-okko-logo.webp 1x,
-                @img/advertising/2x/2x-okko-logo.webp 2x
-              "
-              type="image/webp"
-            />
-            <source
-              srcset="
-                @img/advertising/1x/1x-okko-logo.jpg  1x,
-                @img/advertising/2x//2x-okko-logo.jpg 2x
-              "
-            />
-            <img
-              src="@img/advertising/1x/1x-okko-logo.jpg"
-              alt="okko"
-              width="180"
-              height="240"
-            />
-          </picture>
-        </li>
-      </ul>
+<section class="advertising">
+  <div class="my-container advertising__my-container">
+    <h2 class="u-visually-hidden">Реклама</h2>
+    <article class="c-card-advertising advertising__card-advertising">
+      <a href="#" class="c-card-advertising__link">
+        <picture>
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-desktop.webp 1x,
+              @img/advertising/2x/2x-okko-desktop.webp 2x
+            "
+            media="(min-width: 1024px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-desktop.jpg 1x,
+              @img/advertising/2x/2x-okko-desktop.jpg 2x
+            "
+            media="(min-width: 1024px)"
+          />
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-tablet.webp 1x,
+              @img/advertising/2x/2x-okko-tablet.webp 2x
+            "
+            media="(min-width: 768px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-tablet.jpg 1x,
+              @img/advertising/2x/2x-okko-tablet.jpg 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-mobile.webp 1x,
+              @img/advertising/2x/2x-okko-mobile.webp 2x
+            "
+            media="(min-width: 360px)"
+            type="image/webp"
+          />
+          <source
+            srcset="
+              @img/advertising/1x/1x-okko-mobile.jpg 1x,
+              @img/advertising/2x/2x-okko-mobile.jpg 2x
+            "
+            media="(min-width: 360px)"
+          />
+          <img
+            class="c-card-advertising__img"
+            src="@img/advertising/1x/1x-okko-desktop.jpg"
+            alt="okko"
+            width="948"
+            height="240"
+          />
+        </picture>
+      </a>
     </article>
   </div>
 </section>
