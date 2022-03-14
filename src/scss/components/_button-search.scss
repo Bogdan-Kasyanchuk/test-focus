@@ -8,8 +8,8 @@
   &:focus-visible {
     color: #ed3237;
   }
-}
 
-.c-button-search__icon {
-  fill: currentColor;
+  &__icon {
+    fill: currentColor;
+  }
 }
