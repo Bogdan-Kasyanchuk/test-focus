@@ -13,6 +13,10 @@
   @include flex-v-center;
   position: relative;
 
+  @include max-mobile {
+    width: 100%;
+  }
+
   @include min-tablet {
     padding-left: 15px;
     padding-right: 15px;

@@ -5,7 +5,7 @@
   width: 100%;
 
   @include min-mobile {
-    min-width: $min-mobile;
+    width: $min-mobile;
   }
 
   @include min-tablet {
