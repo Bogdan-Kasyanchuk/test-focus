@@ -4,6 +4,7 @@
 @import './utils/breakpoints';
 @import './utils/visually-hidden';
 @import './utils/variables';
+@import './utils/scroll-custom';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './mixins/breakpoint';
 @import './mixins/mini';
@@ -28,6 +29,8 @@
 @import './components/card-6';
 @import './components/card-7';
 @import './components/card-8';
+@import './components/topic';
+@import './components/content-list';
 @import './components/card-focus';
 @import './components/card-advertising';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++

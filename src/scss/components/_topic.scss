@@ -1,0 +1,89 @@
+.c-topic {
+  position: relative;
+  height: 100%;
+  padding: 15px;
+
+  @include min-tablet {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.c-topic__img-wrapper {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.c-topic__title-wrapper {
+  margin-bottom: 15px;
+
+  @include min-tablet {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include min-small-desktop {
+    width: 450px;
+  }
+
+  @include desktop {
+    padding-top: 26px;
+    padding-bottom: 36px;
+  }
+}
+
+.c-topic__title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #fff;
+
+  @include min-tablet {
+    text-align: left;
+    font-size: 28px;
+  }
+
+  @include min-small-desktop {
+    font-size: 36px;
+    line-height: 1.2;
+  }
+
+  @include desktop {
+    font-size: 40px;
+  }
+}
+
+.c-topic__link {
+  text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 0.88;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0.5;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include min-tablet {
+    text-align: left;
+  }
+}
+
+.c-topic__content-list {
+  @include max-mobile {
+    height: 273px;
+  }
+
+  @include min-small-desktop {
+    width: 380px;
+  }
+}
