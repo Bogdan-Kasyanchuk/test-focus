@@ -4,14 +4,10 @@
   grid-template-columns: repeat(2, max-content);
   justify-content: space-around;
 
-  @media screen and (min-width: $min-tablet) and (max-width: $max-tablet) {
-    grid-template-columns: repeat(4, max-content);
+  @media screen and (min-width: 480px) {
     justify-content: space-between;
-  }
-
-  @include desktop {
-    grid-template-columns: repeat(4, max-content);
-    justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, minmax(80px, max-content));
+    grid-column-gap: 11%;
   }
 }
 
