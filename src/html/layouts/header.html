@@ -9,9 +9,29 @@
       <span class="c-button-burger__line"></span>
     </button>
     <a href="/index.html" class="c-logo header__logo">
-      <svg class="c-logo__icon" width="135" height="30">
-        <use href="@img/icons/icons.svg#ab"></use></svg
-    ></a>
+      <picture>
+        <source
+          srcset="
+            @img/logo/1x/1x-logo-header.webp 1x,
+            @img/logo/2x/2x-logo-header.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            @img/logo/1x/1x-logo-header.png 1x,
+            @img/logo/2x/2x-logo-header.png 2x
+          "
+        />
+        <img
+          class="c-logo__img"
+          src="@img/logo/1x/1x-logo-header.png"
+          alt="Логотип"
+          width="135"
+          height="30"
+        />
+      </picture>
+    </a>
     <ul class="c-menu-header header__menu">
       <li class="c-menu-header__item">
         <a href="#categories" class="c-menu-header__link">Категории</a>

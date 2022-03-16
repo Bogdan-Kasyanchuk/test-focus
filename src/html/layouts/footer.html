@@ -1,140 +1,184 @@
-<footer>
-  <div class="my-container">
-    <a href="#">
-      <svg width="184" height="40">
-        <use href="@img/icons/icons.svg#ab"></use></svg
+<footer class="footer">
+  <div class="my-container footer__my-container">
+    <a href="#" class="c-logo footer__logo">
+      <picture>
+        <source
+          srcset="
+            @img/logo/1x/1x-logo-footer.webp 1x,
+            @img/logo/2x/2x-logo-footer.webp 2x
+          "
+          type="image/webp"
+        />
+        <source
+          srcset="
+            @img/logo/1x/1x-logo-footer.png 1x,
+            @img/logo/2x/2x-logo-footer.png 2x
+          "
+        />
+        <img
+          class="c-logo__img"
+          src="@img/logo/1x/1x-logo-footer.png"
+          alt="Логотип"
+          width="184"
+          height="40"
+        /> </picture
     ></a>
-    <div>
-      <div>
-        <ul>
-          <li><a href="#">Политика</a></li>
-          <li><a href="#">Украина</a></li>
-          <li><a href="#">Экономика</a></li>
-          <li><a href="#">Культура</a></li>
-          <li><a href="#">Мнение</a></li>
-          <li><a href="#">Рейтинги</a></li>
-          <li><a href="#">Длинный focus</a></li>
-          <li><a href="#">Мир</a></li>
+    <div class="footer__main">
+      <ul class="c-menu-footer footer__menu">
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Политика</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Украина</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Экономика</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Культура</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Мнение</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Рейтинги</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Длинный фокус</a>
+        </li>
+        <li class="c-menu-footer__item">
+          <a href="#" class="c-menu-footer__link">Мир</a>
+        </li>
+      </ul>
+      <div class="footer__focus">
+        <ul class="footer__focus-list">
+          <li class="footer__focus-item">
+            <article class="c-focus-card">
+              <a href="#" class="c-focus-card__link">
+                <picture>
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-6.webp 1x,
+                      @img/footer/2x/2x-focus-6.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-6.jpg 1x,
+                      @img/footer/2x/2x-focus-6.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-focus-card__img"
+                    src="@img/footer/1x/1x-focus-6.jpg"
+                    alt="Фокус"
+                    width="85"
+                    height="111"
+                  />
+                </picture>
+              </a>
+            </article>
+          </li>
+          <li class="footer__focus-item">
+            <article class="c-focus-card">
+              <a href="#" class="c-focus-card__link">
+                <picture>
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-7.webp 1x,
+                      @img/footer/2x/2x-focus-7.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-7.jpg 1x,
+                      @img/footer/2x/2x-focus-7.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-focus-card__img"
+                    src="@img/footer/1x/1x-focus-7.jpg"
+                    alt="Фокус"
+                    width="79"
+                    height="111"
+                  />
+                </picture>
+              </a>
+            </article>
+          </li>
+          <li class="footer__focus-item">
+            <article class="c-focus-card">
+              <a href="#" class="c-focus-card__link">
+                <picture>
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-8.webp 1x,
+                      @img/footer/2x/2x-focus-8.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/footer/1x/1x-focus-8.jpg 1x,
+                      @img/footer/2x/2x-focus-8.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-focus-card__img"
+                    src="@img/footer/1x/1x-focus-8.jpg"
+                    alt="Фокус"
+                    width="84"
+                    height="111"
+                  />
+                </picture>
+              </a>
+            </article>
+          </li>
         </ul>
-        <p>
+        <div class="footer__subscription">
+          <p class="footer__text">Гарантировано получите скидку -10%</p>
+          <button class="button footer__button" type="button">
+            Подписаться
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="footer__content-list">
+      <div class="footer__content-item">
+        <p class="footer__content">
           Все права на материалы, опубликованные на данном ресурсе, принадлежат
           ООО "ФОКУС МЕДИА". Какое-либо использование материалов без письменного
           разрешения ООО "ФОКУС МЕДИА" - запрещено. При использовании материалов
           с данного ресурса гиперссылка focus.ua обязательна.
         </p>
-        <p>Данный ресурс — для пользователей возрастом от 18 лет и старше.</p>
+        <p class="footer__content">
+          Данный ресурс — для пользователей возрастом от 18 лет и старше.
+        </p>
       </div>
-      <div>
-        <div>
-          <ul>
-            <li>
-              <article>
-                <a href="#">
-                  <picture>
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-6.webp 1x,
-                        @img/footer/2x/2x-focus-6.webp 2x
-                      "
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-6.jpg 1x,
-                        @img/footer/2x/2x-focus-6.jpg 2x
-                      "
-                    />
-                    <img
-                      src="@img/footer/1x/1x-focus-6.jpg"
-                      alt="Фокус"
-                      width="87"
-                      height="114"
-                    />
-                  </picture>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <a href="#">
-                  <picture>
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-7.webp 1x,
-                        @img/footer/2x/2x-focus-7.webp 2x
-                      "
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-7.jpg 1x,
-                        @img/footer/2x/2x-focus-7.jpg 2x
-                      "
-                    />
-                    <img
-                      src="@img/footer/1x/1x-focus-7.jpg"
-                      alt="Фокус"
-                      width="79"
-                      height="114"
-                    />
-                  </picture>
-                </a>
-              </article>
-            </li>
-            <li>
-              <article>
-                <a href="#">
-                  <picture>
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-8.webp 1x,
-                        @img/footer/2x/2x-focus-8.webp 2x
-                      "
-                      type="image/webp"
-                    />
-                    <source
-                      srcset="
-                        @img/footer/1x/1x-focus-8.jpg 1x,
-                        @img/footer/2x/2x-focus-8.jpg 2x
-                      "
-                    />
-                    <img
-                      src="@img/footer/1x/1x-focus-8.jpg"
-                      alt="Фокус"
-                      width="84"
-                      height="112"
-                    />
-                  </picture>
-                </a>
-              </article>
-            </li>
-          </ul>
-          <div>
-            <p>Гарантировано получите скидку -10%</p>
-            <button type="button">Подписаться</button>
-          </div>
-        </div>
-        <p>
+      <div class="footer__content-item">
+        <p class="footer__content">
           Перепечатка, копирование или воспроизведение информации, содержащей
           ссылку на агентство ИнА "Українські Новини", в каком-либо виде строго
           запрещены.
         </p>
-        <p>
+        <p class="footer__content">
           Все материалы, которые размещены на этом сайте со ссылкой на агентство
           "Интерфакс-Украина", не подлежат дальнейшему воспроизведению и/или
           распространению в любой форме, кроме как с письменного разрешения
           агентства.
         </p>
-        <p>
+        <p class="footer__content">
           Материалы с плашками "Р", "Новости партнеров", "Новости компаний",
           "Новости партий", "Инновации", "Позиция", "Спецпроект при поддержке"
           публикуются на коммерческой основе.
         </p>
       </div>
     </div>
-    <div>
-      <p>© 2020 Фокус. Все права защищены.</p>
-      <p>Політика конфіденційності</p>
+    <div class="footer__copyright">
+      <p class="footer__copyright-text">© 2020 Фокус. Все права защищены.</p>
+      <p class="footer__copyright-text">Політика конфіденційності</p>
     </div>
   </div>
 </footer>
