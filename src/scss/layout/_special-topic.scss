@@ -2,15 +2,3 @@
   padding-top: 26px;
   padding-bottom: 26px;
 }
-
-.special-topic__my-container {
-  height: 400px;
-
-  @include min-tablet {
-    height: 225px;
-  }
-
-  @include desktop {
-    height: 302px;
-  }
-}
