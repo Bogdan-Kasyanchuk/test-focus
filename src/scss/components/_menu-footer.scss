@@ -1,6 +1,6 @@
 .c-menu-footer {
   display: grid;
-  grid-template-rows: repeat(auto-fill, 40px);
+  grid-template-rows: repeat(auto-fill, minmax(40px, max-content));
   grid-template-columns: repeat(2, max-content);
   justify-content: space-around;
 
@@ -12,11 +12,11 @@
 }
 
 .c-menu-footer__link {
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
-  line-height: 2.1;
+  line-height: 1.2;
   text-transform: uppercase;
   color: #000;
 

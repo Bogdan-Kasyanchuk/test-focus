@@ -1,0 +1,16 @@
+.c-button-arrow {
+  width: 40px;
+  height: 47px;
+  background-color: transparent;
+  color: #fff;
+
+  &:hover,
+  &:focus-visible {
+    color: #ed3237;
+  }
+
+  &__icon {
+    stroke: currentColor;
+    stroke-width: 2px;
+  }
+}
