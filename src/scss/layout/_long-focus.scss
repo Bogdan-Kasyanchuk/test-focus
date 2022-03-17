@@ -1,0 +1,20 @@
+.long-focus {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.long-focus__my-container {
+  height: 300px;
+
+  @include min-tablet {
+    height: 250px;
+  }
+
+  @include min-small-desktop {
+    height: 300px;
+  }
+
+  @include desktop {
+    height: 400px;
+  }
+}

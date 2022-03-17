@@ -1,6 +1,6 @@
 // @import '../../node_modules/bootstrap/scss/bootstrap';
 @import './fonts';
-
+// +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './utils/breakpoints';
 @import './utils/visually-hidden';
 @import './utils/variables';
@@ -9,8 +9,8 @@
 @import './mixins/breakpoint';
 @import './mixins/mini';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
-@import './base/base';
 @import './base/reset';
+@import './base/base';
 @import './base/container';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './components/button-burger';
@@ -33,6 +33,9 @@
 @import './components/content-list';
 @import './components/card-focus';
 @import './components/card-advertising';
+@import './components/button-arrow';
+@import './components/slider-popular';
+@import './components/slider-focus';
 @import './components/menu-footer';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './layout/header';
