@@ -1,112 +1,44 @@
-.c-slider-focus {
+.c-slider-popular {
   position: relative;
-  height: 100%;
+  height: 292px;
 }
 
-.c-slider-focus__container {
+.c-slider-popular__container {
   height: 100%;
   overflow: hidden;
 }
 
-.c-slider-focus__list {
+.c-slider-popular__list {
   display: flex;
+}
+
+.c-slider-popular__item {
   height: 100%;
-}
-
-.c-slider-focus__item {
-  height: 100%;
-  min-width: 100%;
-  position: relative;
-  padding: 16px;
-}
-
-.c-slider-focus__link-category {
-  position: relative;
-  z-index: 1;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: #000;
-  background-color: #fff;
-  padding: 6px 14px;
-  display: inline-block;
-  margin-bottom: 100px;
-
-  @include min-small-desktop {
-    margin-bottom: 120px;
-  }
-
-  @include desktop {
-    margin-bottom: 170px;
+  min-width: 300px;
+  &:not(:last-child) {
+    margin-right: 24px;
   }
 }
 
-.c-slider-focus__link {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.c-slider-focus__img-wrapper {
-  position: absolute;
-  z-index: -1;
-  left: 0;
-  top: 0;
-}
-
-.c-slider-focus__content {
-  text-align: center;
-}
-
-.c-slider-focus__title {
-  font-weight: 700;
-  font-size: 40px;
-  color: #fff;
-  margin-bottom: 16px;
-
-  @include min-tablet {
-    font-size: 48px;
-    line-height: 0.74;
-  }
-
-  @include min-small-desktop {
-    font-size: 54px;
-    margin-bottom: 20px;
-  }
-}
-
-.c-slider-focus__text {
-  font-weight: 500;
-  font-size: 20px;
-  color: #fff;
-  line-height: 1.1;
-
-  @include min-small-desktop {
-    font-size: 24px;
-    line-height: 1;
-  }
-}
-
-.c-slider-focus__button-arrow {
+.c-slider-popular__button-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  color: black;
 }
 
-.c-slider-focus__button-arrow--left {
-  left: 0;
+.c-slider-popular__button-arrow--left {
+  left: -38px;
 
-  @include min-tablet {
-    left: 24px;
+  @include desktop {
+    left: -60px;
   }
 }
 
-.c-slider-focus__button-arrow--right {
-  right: 0;
+.c-slider-popular__button-arrow--right {
+  right: -38px;
 
-  @include min-tablet {
-    right: 24px;
+  @include desktop {
+    right: -60px;
   }
 }

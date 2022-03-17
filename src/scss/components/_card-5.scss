@@ -4,6 +4,10 @@
   border-bottom: 1px solid #e5e5e5;
 }
 
+.c-card-5--background-color {
+  background-color: #000;
+}
+
 .c-card-5__link-category {
   position: absolute;
   left: 0;
@@ -15,6 +19,16 @@
   background-color: #000;
   padding: 6px 14px;
   z-index: 11;
+}
+
+.c-card-5__link-category--lite {
+  color: #000;
+  background-color: #fff;
+}
+
+.c-card-5__link-category--position {
+  left: 16px;
+  top: 20px;
 }
 
 .c-card-5__link {
@@ -35,11 +49,21 @@
   padding-bottom: 10px;
 }
 
+.c-card-5__content--padding {
+  padding-top: 158px;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
 .c-card-5__title {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   color: #000;
+}
+
+.c-card-5__title--color {
+  color: #fff;
 }
 
 .c-card-5__text {
@@ -55,4 +79,8 @@
   text-transform: uppercase;
   color: #000;
   opacity: 0.5;
+}
+
+.c-card-5__time--color {
+  color: #fff;
 }

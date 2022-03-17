@@ -1,177 +1,138 @@
-<section>
-  <div class="my-container">
-    <h2>Сейчас популярно</h2>
-    <div
-      id="carouselPopular"
-      class="carousel-popular carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <article class="col-md-3">
-            <a href="#">Протесты в США</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/popular/1x/1x-propaganda-victims.webp 1x,
-                    @img/popular/2x/2x-propaganda-victims.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/popular/1x/1x-propaganda-victims.jpg 1x,
-                    @img/popular/2x/2x-propaganda-victims.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/popular/1x/1x-propaganda-victims.jpg"
-                  alt="Жертвы собственной пропаганды"
-                  width="300"
-                  height="292"
-                />
-              </picture>
-            </div>
-            <div>
-              <h3>
-                Жертвы собственной пропаганды. Как либеральные могут проиграть
-                холодную войну
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-3">
-            <a href="#">Мир</a>
-            <a href="#"></a>
-            <div>
-              <h3>
-                Австралиец выловил рекордного красного императора и решил
-                передать его ученым
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-3">
-            <a href="#">Мир</a>
-            <a href="#"></a>
-            <div>
-              <h3>
-                Жизнь за 80. 5 самых пожилых рекорсменов из Книги рекордов
-                Гиннеса
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-3">
-            <a href="#">Мир</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/popular/1x/1x-dress-code.webp 1x,
-                    @img/popular/2x/2x-dress-code.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/popular/1x/1x-dress-code.jpg 1x,
-                    @img/popular/2x/2x-dress-code.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/popular/1x/1x-dress-code.jpg"
-                  alt="Дресс-код постапокалипсиса"
-                  width="300"
-                  height="292"
-                />
-              </picture>
-            </div>
-            <div>
-              <h3>
-                Дресс-код постапокалипсиса. Как коронавирус и карантин навсегда
-                изменили стиль
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-3">
-            <a href="#">Протесты в США</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/popular/1x/1x-propaganda-victims.webp 1x,
-                    @img/popular/2x/2x-propaganda-victims.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/popular/1x/1x-propaganda-victims.jpg 1x,
-                    @img/popular/2x/2x-propaganda-victims.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/popular/1x/1x-propaganda-victims.jpg"
-                  alt="Жертвы собственной пропаганды"
-                  width="300"
-                  height="292"
-                />
-              </picture>
-            </div>
-            <div>
-              <h3>
-                Жертвы собственной пропаганды. Как либеральные могут проиграть
-                холодную войну
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-3">
-            <a href="#">Мир</a>
-            <a href="#"></a>
-            <div>
-              <h3>
-                Австралиец выловил рекордного красного императора и решил
-                передать его ученым
-              </h3>
-              <span>15:44</span>
-            </div>
-          </article>
-        </div>
+<section class="popular">
+  <div class="my-container popular__my-container">
+    <h2 class="title popular__title">Сейчас популярно</h2>
+    <div class="c-slider-popular">
+      <div class="c-slider-popular__container">
+        <ul class="c-slider-popular__list">
+          <li class="c-slider-popular__item">
+            <article class="c-card-3">
+              <a href="#" class="c-card-3__link-category">Протесты в США</a>
+              <a href="#" class="c-card-3__link"></a>
+              <div class="c-card-3__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/popular/1x/1x-propaganda-victims.webp 1x,
+                      @img/popular/2x/2x-propaganda-victims.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/popular/1x/1x-propaganda-victims.jpg 1x,
+                      @img/popular/2x/2x-propaganda-victims.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-card-3__img-wrapper"
+                    src="@img/popular/1x/1x-propaganda-victims.jpg"
+                    alt="Жертвы собственной пропаганды"
+                    width="300"
+                    height="292"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-3__content">
+                <h3 class="c-card-3__title">
+                  Жертвы собственной пропаганды. Как либеральные могут проиграть
+                  холодную войну
+                </h3>
+                <span class="c-card-3__time">15:44</span>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item">
+            <article class="c-card-5 c-card-5--background-color">
+              <a
+                href="#"
+                class="c-card-5__link-category c-card-5__link-category--lite c-card-5__link-category--position"
+                >Мир</a
+              >
+              <a href="#" class="c-card-5__link"></a>
+              <div class="c-card-5__content c-card-5__content--padding">
+                <h3 class="c-card-5__title c-card-5__title--color">
+                  Австралиец выловил рекордного красного императора и решил
+                  передать его ученым
+                </h3>
+                <span class="c-card-5__time c-card-5__time--color">15:44</span>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item">
+            <article class="c-card-5">
+              <a
+                href="#"
+                class="c-card-5__link-category c-card-5__link-category--position"
+                >Мир</a
+              >
+              <a href="#" class="c-card-5__link"></a>
+              <div class="c-card-5__content c-card-5__content--padding">
+                <h3 class="c-card-5__title">
+                  Жизнь за 80. 5 самых пожилых рекорсменов из Книги рекордов
+                  Гиннеса
+                </h3>
+                <span class="c-card-5__time">15:44</span>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item">
+            <article class="c-card-3">
+              <a href="#" class="c-card-3__link-category">Мир</a>
+              <a href="#" class="c-card-3__link"></a>
+              <div class="c-card-3__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/popular/1x/1x-dress-code.webp 1x,
+                      @img/popular/2x/2x-dress-code.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/popular/1x/1x-dress-code.jpg 1x,
+                      @img/popular/2x/2x-dress-code.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-card-3__img"
+                    src="@img/popular/1x/1x-dress-code.jpg"
+                    alt="Дресс-код постапокалипсиса"
+                    width="300"
+                    height="292"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-3__content">
+                <h3 class="c-card-3__title">
+                  Дресс-код постапокалипсиса. Как коронавирус и карантин
+                  навсегда изменили стиль
+                </h3>
+                <span class="c-card-3__time">15:44</span>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item"></li>
+          <li class="c-slider-popular__item"></li>
+        </ul>
       </div>
       <button
-        class="carousel-control-prev"
+        class="c-button-arrow c-slider-popular__button-arrow c-slider-popular__button-arrow--left"
         type="button"
-        data-bs-target="#carouselPopular"
-        data-bs-slide="prev"
+        aria-label="Previous"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <svg class="c-button-arrow__icon" width="24" height="47">
+          <use href="@img/icons/icons.svg#arrow-left"></use>
+        </svg>
       </button>
       <button
-        class="carousel-control-next"
+        class="c-button-arrow c-slider-popular__button-arrow c-slider-popular__button-arrow--right"
         type="button"
-        data-bs-target="#carouselPopular"
-        data-bs-slide="next"
+        aria-label="Next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <svg class="c-button-arrow__icon" width="24" height="47">
+          <use href="@img/icons/icons.svg#arrow-right"></use>
+        </svg>
       </button>
     </div>
   </div>

@@ -1,12 +1,17 @@
 .c-topic {
   position: relative;
-  height: 100%;
   padding: 15px;
+  height: 400px;
 
   @include min-tablet {
+    height: 225px;
     padding: 20px;
     display: flex;
     justify-content: space-between;
+  }
+
+  @include desktop {
+    height: 302px;
   }
 }
 
