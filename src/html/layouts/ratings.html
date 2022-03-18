@@ -1,172 +1,120 @@
-<section id="ratings">
-  <div class="my-container">
-    <h2>Рейтенги</h2>
-    <div
-      id="carouselRatings"
-      class="carousel-ratings carousel slide"
-      data-bs-ride="carousel"
-    >
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <article class="col-md-4">
-            <a href="#">Рейтинг</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-influential-ukrainians.webp 1x,
-                    @img/ratings/2x/2x-influential-ukrainians.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-influential-ukrainians.jpg 1x,
-                    @img/ratings/2x/2x-influential-ukrainians.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/ratings/1x/1x-influential-ukrainians.jpg"
-                  alt="Самые влиятельные украинцы"
-                  width="408"
-                  height="514"
-                />
-              </picture>
-            </div>
-            <div>
-              <span>100</span>
-              <p>Рейтинг 2019</p>
-              <h3>Самые влиятельные украинцы</h3>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-4">
-            <a href="#">Рейтинг</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-riot-buttons.webp 1x,
-                    @img/ratings/2x/2x-riot-buttons.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-riot-buttons.jpg 1x,
-                    @img/ratings/2x/2x-riot-buttons.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/ratings/1x/1x-riot-buttons.jpg"
-                  alt="Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса"
-                  width="324"
-                  height="194"
-                />
-              </picture>
-            </div>
-            <h3>
-              Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса
-            </h3>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-4">
-            <a href="#">Рейтинг</a>
-            <a href="#"></a>
-            <div>
-              <span>100</span>
-              <h3>Самые богатые люди Украины. Полный список</h3>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-4">
-            <a href="#">Рейтинг</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-influential-ukrainians.webp 1x,
-                    @img/ratings/2x/2x-influential-ukrainians.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-influential-ukrainians.jpg 1x,
-                    @img/ratings/2x/2x-influential-ukrainians.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/ratings/1x/1x-influential-ukrainians.jpg"
-                  alt="Самые влиятельные украинцы"
-                  width="408"
-                  height="514"
-                />
-              </picture>
-            </div>
-            <div>
-              <span>100</span>
-              <p>Рейтинг 2019</p>
-              <h3>Самые влиятельные украинцы</h3>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article class="col-md-4">
-            <a href="#">Рейтинг</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-riot-buttons.webp 1x,
-                    @img/ratings/2x/2x-riot-buttons.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/ratings/1x/1x-riot-buttons.jpg 1x,
-                    @img/ratings/2x/2x-riot-buttons.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/ratings/1x/1x-riot-buttons.jpg"
-                  alt="Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса"
-                  width="324"
-                  height="194"
-                />
-              </picture>
-            </div>
-            <h3>
-              Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса
-            </h3>
-          </article>
-        </div>
+<section class="ratings" id="ratings">
+  <div class="my-container ratings__my-container">
+    <h2 class="title ratings__title">Рейтенги</h2>
+    <div class="c-slider-ratings">
+      <div class="c-slider-ratings__container">
+        <ul class="c-slider-ratings__list">
+          <li class="c-slider-ratings__item">
+            <article class="c-card-slide-rating">
+              <a href="#" class="c-card-slide-rating__link-category">Рейтинг</a>
+              <a href="#" class="c-card-slide-rating__link"></a>
+              <div
+                class="c-card-slide-rating__img-wrapper c-card-slide-rating__img-wrapper--absolute"
+              >
+                <picture>
+                  <source
+                    srcset="
+                      @img/ratings/1x/1x-influential-ukrainians.webp 1x,
+                      @img/ratings/2x/2x-influential-ukrainians.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/ratings/1x/1x-influential-ukrainians.jpg 1x,
+                      @img/ratings/2x/2x-influential-ukrainians.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-card-slide-rating__img"
+                    src="@img/ratings/1x/1x-influential-ukrainians.jpg"
+                    alt="Самые влиятельные украинцы"
+                    width="408"
+                    height="514"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-slide-rating__content">
+                <span class="c-card-slide-rating__number">100</span>
+                <p class="c-card-slide-rating__text">Рейтинг 2019</p>
+                <h3 class="c-card-slide-rating__title">
+                  Самые влиятельные украинцы
+                </h3>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-ratings__item">
+            <article class="c-card-slide-rating">
+              <a
+                href="#"
+                class="c-card-slide-rating__link-category c-card-slide-rating__link-category--color c-card-slide-rating__link-category--margin-bottom"
+                >Рейтинг</a
+              >
+              <a href="#" class="c-card-slide-rating__link"></a>
+              <div class="c-card-slide-rating__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/ratings/1x/1x-riot-buttons.webp 1x,
+                      @img/ratings/2x/2x-riot-buttons.webp 2x
+                    "
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/ratings/1x/1x-riot-buttons.jpg 1x,
+                      @img/ratings/2x/2x-riot-buttons.jpg 2x
+                    "
+                  />
+                  <img
+                    class="c-card-slide-rating__img c-card-slide-rating__img--margin-auto"
+                    src="@img/ratings/1x/1x-riot-buttons.jpg"
+                    alt="Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса"
+                    width="324"
+                    height="194"
+                  />
+                </picture>
+              </div>
+              <h3
+                class="c-card-slide-rating__title c-card-slide-rating__title--color"
+              >
+                Бунт кнопок. 30 лучших работодателей Украины — рейтинг Фокуса
+              </h3>
+            </article>
+          </li>
+          <li class="c-slider-ratings__item">
+            <article
+              class="c-card-slide-rating c-card-slide-rating--background-color"
+            >
+              <a href="#" class="c-card-slide-rating__link-category">Рейтинг</a>
+              <a href="#" class="c-card-slide-rating__link"></a>
+              <div class="c-card-slide-rating__content">
+                <span class="c-card-slide-rating__number">100</span>
+                <h3 class="c-card-slide-rating__title">
+                  Самые богатые люди Украины. Полный список
+                </h3>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
       <button
-        class="carousel-control-prev"
+        class="c-button-arrow c-slider-ratings__button-arrow c-slider-ratings__button-arrow--left"
         type="button"
-        data-bs-target="#carouselRatings"
-        data-bs-slide="prev"
+        aria-label="Previous"
       >
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+        <svg class="c-button-arrow__icon" width="24" height="47">
+          <use href="@img/icons/icons.svg#arrow-left"></use>
+        </svg>
       </button>
       <button
-        class="carousel-control-next"
+        class="c-button-arrow c-slider-ratings__button-arrow c-slider-ratings__button-arrow--right"
         type="button"
-        data-bs-target="#carouselRatings"
-        data-bs-slide="next"
+        aria-label="Next"
       >
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+        <svg class="c-button-arrow__icon" width="24" height="47">
+          <use href="@img/icons/icons.svg#arrow-right"></use>
+        </svg>
       </button>
     </div>
   </div>

@@ -10,10 +10,10 @@
 
 .c-slider-popular__list {
   display: flex;
+  height: 100%;
 }
 
 .c-slider-popular__item {
-  height: 100%;
   min-width: 300px;
   &:not(:last-child) {
     margin-right: 24px;
