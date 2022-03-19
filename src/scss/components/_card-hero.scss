@@ -1,0 +1,42 @@
+.c-card-hero {
+  position: relative;
+  height: 100%;
+  padding: 12px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (min-width: $min-small-desktop) and (max-width: $max-small-desktop) {
+    padding: 10px;
+  }
+}
+
+.c-card-hero__img-wrapper {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.c-card-hero__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.1;
+  text-align: center;
+  color: #fff;
+
+  @media screen and (min-width: $min-small-desktop) and (max-width: $max-small-desktop) {
+    font-size: 14px;
+  }
+}
+
+.c-card-hero__progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: 2px solid #ed3237;
+}
