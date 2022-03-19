@@ -1,15 +1,16 @@
 <section class="hero">
-  <div class="my-container">
-    <div>
-      <ul>
-        <li>
-          <div>
+  <div class="my-container hero__my-container">
+    <ul class="hero__list">
+      <li class="hero__item">
+        <article class="c-card-hero">
+          <div class="c-card-hero__img-wrapper">
             <picture>
               <source
                 srcset="
                   @img/hero/1x/1x-lady-in-law-small.webp 1x,
                   @img/hero/2x/2x-lady-in-law-small.webp 2x
                 "
+                media="(min-width: 1440px)"
                 type="image/webp"
               />
               <source
@@ -17,8 +18,40 @@
                   @img/hero/1x/1x-lady-in-law-small.jpg 1x,
                   @img/hero/2x/2x-lady-in-law-small.jpg 2x
                 "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-lady-in-law-small-small-desktop.webp 1x,
+                  @img/hero/2x/2x-lady-in-law-small-small-desktop.webp 2x
+                "
+                media="(min-width: 1024px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-lady-in-law-small-small-desktop.jpg 1x,
+                  @img/hero/2x/2x-lady-in-law-small-small-desktop.jpg 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-lady-in-law-small.webp 1x,
+                  @img/hero/2x/2x-lady-in-law-small.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-lady-in-law-small.jpg 1x,
+                  @img/hero/2x/2x-lady-in-law-small.jpg 2x
+                "
+                media="(min-width: 768px)"
               />
               <img
+                class="c-card-hero__img"
                 src="@img/hero/1x/1x-lady-in-law-small.jpg"
                 alt="Леди в законе. Особый статус для жены президетна"
                 width="300"
@@ -26,17 +59,22 @@
               />
             </picture>
           </div>
-          <p>Леди в законе. Особый статус для жены президетна</p>
-          <progress max="100" value="70"></progress>
-        </li>
-        <li>
-          <div>
+          <p class="c-card-hero__text">
+            Леди в законе. Особый статус для жены президетна
+          </p>
+          <div class="c-card-hero__progress"></div>
+        </article>
+      </li>
+      <li class="hero__item">
+        <article class="c-card-hero">
+          <div class="c-card-hero__img-wrapper">
             <picture>
               <source
                 srcset="
                   @img/hero/1x/1x-explosion-on-poznyak-small.webp 1x,
                   @img/hero/2x/2x-explosion-on-poznyak-small.webp 2x
                 "
+                media="(min-width: 1440px)"
                 type="image/webp"
               />
               <source
@@ -44,8 +82,40 @@
                   @img/hero/1x/1x-explosion-on-poznyak-small.jpg 1x,
                   @img/hero/2x/2x-explosion-on-poznyak-small.jpg 2x
                 "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-explosion-on-poznyak-small-small-desktop.webp 1x,
+                  @img/hero/2x/2x-explosion-on-poznyak-small-small-desktop.webp 2x
+                "
+                media="(min-width: 1024px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-explosion-on-poznyak-small-small-desktop.jpg 1x,
+                  @img/hero/2x/2x-explosion-on-poznyak-small-small-desktop.jpg 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-explosion-on-poznyak-small.webp 1x,
+                  @img/hero/2x/2x-explosion-on-poznyak-small.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-explosion-on-poznyak-small.jpg 1x,
+                  @img/hero/2x/2x-explosion-on-poznyak-small.jpg 2x
+                "
+                media="(min-width: 768px)"
               />
               <img
+                class="c-card-hero__img"
                 src="@img/hero/1x/1x-explosion-on-poznyak-small.jpg"
                 alt="Взрыв на Позняках в Киеве"
                 width="300"
@@ -53,17 +123,20 @@
               />
             </picture>
           </div>
-          <p>Взрыв на Позняках в Киеве</p>
-          <progress max="100" value="70"></progress>
-        </li>
-        <li>
-          <div>
+          <p class="c-card-hero__text">Взрыв на Позняках в Киеве</p>
+          <div class="c-card-hero__progress"></div>
+        </article>
+      </li>
+      <li class="hero__item">
+        <article class="c-card-hero">
+          <div class="c-card-hero__img-wrapper">
             <picture>
               <source
                 srcset="
                   @img/hero/1x/1x-flood-small.webp 1x,
                   @img/hero/2x/2x-flood-small.webp 2x
                 "
+                media="(min-width: 1440px)"
                 type="image/webp"
               />
               <source
@@ -71,8 +144,40 @@
                   @img/hero/1x/1x-flood-small.jpg 1x,
                   @img/hero/2x/2x-flood-small.jpg 2x
                 "
+                media="(min-width: 1440px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-flood-small-small-desktop.webp 1x,
+                  @img/hero/2x/2x-flood-small-small-desktop.webp 2x
+                "
+                media="(min-width: 1024px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-flood-small-small-desktop.jpg 1x,
+                  @img/hero/2x/2x-flood-small-small-desktop.jpg 2x
+                "
+                media="(min-width: 1024px)"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-flood-small.webp 1x,
+                  @img/hero/2x/2x-flood-small.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-flood-small.jpg 1x,
+                  @img/hero/2x/2x-flood-small.jpg 2x
+                "
+                media="(min-width: 768px)"
               />
               <img
+                class="c-card-hero__img"
                 src="@img/hero/1x/1x-flood-small.jpg"
                 alt="Потоп на западной Украине"
                 width="300"
@@ -80,17 +185,20 @@
               />
             </picture>
           </div>
-          <p>Потоп на западной Украине</p>
-          <progress max="100" value="70"></progress>
-        </li>
-        <li>
-          <div>
+          <p class="c-card-hero__text">Потоп на западной Украине</p>
+          <div class="c-card-hero__progress"></div>
+        </article>
+      </li>
+      <li class="hero__item">
+        <article class="c-card-hero">
+          <div class="c-card-hero__img-wrapper">
             <picture>
               <source
                 srcset="
                   @img/hero/1x/1x-digital-transformation-small.webp 1x,
                   @img/hero/2x/2x-digital-transformation-small.webp 2x
                 "
+                media="(min-width: 1440px)"
                 type="image/webp"
               />
               <source
@@ -98,8 +206,42 @@
                   @img/hero/1x/1x-digital-transformation-small.jpg 1x,
                   @img/hero/2x/2x-digital-transformation-small.jpg 2x
                 "
+                media="(min-width: 1440px)"
+              />
+
+              <source
+                srcset="
+                  @img/hero/1x/1x-digital-transformation-small-small-desktop.webp 1x,
+                  @img/hero/2x/2x-digital-transformation-small-small-desktop.webp 2x
+                "
+                media="(min-width: 1024px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-digital-transformation-small-small-desktop.jpg 1x,
+                  @img/hero/2x/2x-digital-transformation-small-small-desktop.jpg 2x
+                "
+                media="(min-width: 1024px)"
+              />
+
+              <source
+                srcset="
+                  @img/hero/1x/1x-digital-transformation-small.webp 1x,
+                  @img/hero/2x/2x-digital-transformation-small.webp 2x
+                "
+                media="(min-width: 768px)"
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  @img/hero/1x/1x-digital-transformation-small.jpg 1x,
+                  @img/hero/2x/2x-digital-transformation-small.jpg 2x
+                "
+                media="(min-width: 768px)"
               />
               <img
+                class="c-card-hero__img"
                 src="@img/hero/1x/1x-digital-transformation-small.jpg"
                 alt="Цифровая трансформация бизнеса Украины"
                 width="300"
@@ -107,167 +249,368 @@
               />
             </picture>
           </div>
-          <p>Цифровая трансформация бизнеса Украины</p>
-          <progress max="100" value="70"></progress>
-        </li>
-      </ul>
-    </div>
-    <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <article>
-            <a href="#">Политика</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/hero/1x/1x-lady-in-law.webp 1x,
-                    @img/hero/2x/2x-lady-in-law.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/hero/1x/1x-lady-in-law.jpg 1x,
-                    @img/hero/2x/2x-lady-in-law.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/hero/1x/1x-lady-in-law.jpg"
-                  alt="Леди в законе. Особый статус для жены президетна"
-                  width="1272"
-                  height="466"
-                />
-              </picture>
-            </div>
-            <div>
-              <h2>
-                Леди в законе. Зачем Зеленскому понадобился особый статус для
-                жены президента
-              </h2>
-              <p>
-                Владимир Зеленский загорелся идеей разработки закона о первой
-                леди. Для чего ему это понадобилось, и какие права и обязанности
-                возлагаются на супругу главы государства в Украине
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article>
-            <a href="#">Украина</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/hero/1x/1x-explosion-on-poznyak.webp 1x,
-                    @img/hero/2x/2x-explosion-on-poznyak.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/hero/1x/1x-explosion-on-poznyak.jpg 1x,
-                    @img/hero/2x/2x-explosion-on-poznyak.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/hero/1x/1x-explosion-on-poznyak.jpg"
-                  alt="Взрыв на Позняках в Киеве"
-                  width="1272"
-                  height="466"
-                />
-              </picture>
-            </div>
-            <div>
-              <h2>Взрыв на Позняках в Киеве</h2>
-              <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
-                sapiente quos perferendis ab commodi. Delectus, accusantium
-                commodi ad temporibus ex ea necessitatibus adipisci, veniam
-                saepe, libero distinctio labore harum illum!
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article>
-            <a href="#">Украина</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/hero/1x/1x-flood.webp 1x,
-                    @img/hero/2x/2x-flood.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/hero/1x/1x-flood.jpg 1x,
-                    @img/hero/2x/2x-flood.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/hero/1x/1x-flood.jpg"
-                  alt="Потоп на западной Украине"
-                  width="1272"
-                  height="466"
-                />
-              </picture>
-            </div>
-            <div>
-              <h2>Потоп на западной Украине</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Doloremque ipsam magni cupiditate vitae autem corporis tempore
-                expedita iste aperiam, ipsum aut accusantium labore harum
-                molestiae et voluptatibus quae numquam hic!
-              </p>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-item">
-          <article>
-            <a href="#">Технологии и наука</a>
-            <a href="#"></a>
-            <div>
-              <picture>
-                <source
-                  srcset="
-                    @img/hero/1x/1x-digital-transformation.webp 1x,
-                    @img/hero/2x/2x-digital-transformation.webp 2x
-                  "
-                  type="image/webp"
-                />
-                <source
-                  srcset="
-                    @img/hero/1x/1x-digital-transformation.jpg 1x,
-                    @img/hero/2x/2x-digital-transformation.jpg 2x
-                  "
-                />
-                <img
-                  src="@img/hero/1x/1x-digital-transformation.jpg"
-                  alt="Цифровая трансформация бизнеса Украины"
-                  width="1272"
-                  height="466"
-                />
-              </picture>
-            </div>
-            <div>
-              <h2>Цифровая трансформация бизнеса Украины</h2>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem
-                esse sed tempore, sint minus sapiente vitae rem, quia dolores
-                tempora saepe officia odit amet modi veritatis possimus deleniti
-                unde necessitatibus.
-              </p>
-            </div>
-          </article>
-        </div>
+          <p class="c-card-hero__text">
+            Цифровая трансформация бизнеса Украины
+          </p>
+          <div class="c-card-hero__progress"></div>
+        </article>
+      </li>
+    </ul>
+    <div class="c-slider-hero">
+      <div class="c-slider-hero__container">
+        <ul class="c-slider-hero__list">
+          <li class="c-slider-hero__item">
+            <article class="c-card-slide-hero">
+              <a href="#" class="c-card-slide-hero__link-category">Политика</a>
+              <a href="#" class="c-card-slide-hero__link"></a>
+              <div class="c-card-slide-hero__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-desktop.webp 1x,
+                      @img/hero/2x/2x-lady-in-law-desktop.webp 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-desktop.jpg 1x,
+                      @img/hero/2x/2x-lady-in-law-desktop.jpg 2x
+                    "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-small-desktop.webp 1x,
+                      @img/hero/2x/2x-lady-in-law-small-desktop.webp 2x
+                    "
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-small-desktop.jpg 1x,
+                      @img/hero/2x/2x-lady-in-law-small-desktop.jpg 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-tablet.webp 1x,
+                      @img/hero/2x/2x-lady-in-law-tablet.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-tablet.jpg 1x,
+                      @img/hero/2x/2x-lady-in-law-tablet.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-mobile.webp 1x,
+                      @img/hero/2x/2x-lady-in-law-mobile.webp 2x
+                    "
+                    media="(min-width: 360px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-lady-in-law-mobile.jpg 1x,
+                      @img/hero/2x/2x-lady-in-law-mobile.jpg 2x
+                    "
+                    media="(min-width: 360px)"
+                  />
+                  <img
+                    class="c-card-slide-hero__img"
+                    src="@img/hero/1x/1x-lady-in-law-desktop.jpg"
+                    alt="Леди в законе. Особый статус для жены президетна"
+                    width="1272"
+                    height="466"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-slide-hero__content">
+                <h2 class="c-card-slide-hero__title">
+                  Леди в законе. Зачем Зеленскому понадобился особый статус для
+                  жены президента
+                </h2>
+                <p class="c-card-slide-hero__text">
+                  Владимир Зеленский загорелся идеей разработки закона о первой
+                  леди. Для чего ему это понадобилось, и какие права и
+                  обязанности возлагаются на супругу главы государства в Украине
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-hero__item">
+            <article class="c-card-slide-hero">
+              <a href="#" class="c-card-slide-hero__link-category">Украина</a>
+              <a href="#" class="c-card-slide-hero__link"></a>
+              <div class="c-card-slide-hero__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-desktop.webp 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-desktop.webp 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-desktop.jpg 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-desktop.jpg 2x
+                    "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-small-desktop.webp 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-small-desktop.webp 2x
+                    "
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-small-desktop.jpg 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-small-desktop.jpg 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-tablet.webp 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-tablet.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-tablet.jpg 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-tablet.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-mobile.webp 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-mobile.webp 2x
+                    "
+                    media="(min-width: 360px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-explosion-on-poznyak-mobile.jpg 1x,
+                      @img/hero/2x/2x-explosion-on-poznyak-mobile.jpg 2x
+                    "
+                    media="(min-width: 360px)"
+                  />
+                  <img
+                    class="c-card-slide-hero__img"
+                    src="@img/hero/1x/1x-explosion-on-poznyak-desktop.jpg"
+                    alt="Взрыв на Позняках в Киеве"
+                    width="1272"
+                    height="466"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-slide-hero__content">
+                <h2 class="c-card-slide-hero__title">
+                  Взрыв на Позняках в Киеве
+                </h2>
+                <p class="c-card-slide-hero__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                  sapiente quos perferendis ab commodi. Delectus, accusantium
+                  commodi ad temporibus ex ea necessitatibus adipisci!
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-hero__item">
+            <article class="c-card-slide-hero">
+              <a href="#" class="c-card-slide-hero__link-category">Украина</a>
+              <a href="#" class="c-card-slide-hero__link"></a>
+              <div class="c-card-slide-hero__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-desktop.webp 1x,
+                      @img/hero/2x/2x-flood-desktop.webp 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-desktop.jpg 1x,
+                      @img/hero/2x/2x-flood-desktop.jpg 2x
+                    "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-small-desktop.webp 1x,
+                      @img/hero/2x/2x-flood-small-desktop.webp 2x
+                    "
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-small-desktop.jpg 1x,
+                      @img/hero/2x/2x-flood-small-desktop.jpg 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-tablet.webp 1x,
+                      @img/hero/2x/2x-flood-tablet.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-tablet.jpg 1x,
+                      @img/hero/2x/2x-flood-tablet.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-mobile.webp 1x,
+                      @img/hero/2x/2x-flood-mobile.webp 2x
+                    "
+                    media="(min-width: 360px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-flood-mobile.jpg 1x,
+                      @img/hero/2x/2x-flood-mobile.jpg 2x
+                    "
+                    media="(min-width: 360px)"
+                  />
+                  <img
+                    class="c-card-slide-hero__img"
+                    src="@img/hero/1x/1x-flood-desktop.jpg"
+                    alt="Потоп на западной Украине"
+                    width="1272"
+                    height="466"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-slide-hero__content">
+                <h2 class="c-card-slide-hero__title">
+                  Потоп на западной Украине
+                </h2>
+                <p class="c-card-slide-hero__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                  sapiente quos perferendis ab commodi. Delectus, accusantium
+                  commodi ad temporibus ex ea necessitatibus adipisci!
+                </p>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-hero__item">
+            <article class="c-card-slide-hero">
+              <a href="#" class="c-card-slide-hero__link-category"
+                >Технологии и наука</a
+              >
+              <a href="#" class="c-card-slide-hero__link"></a>
+              <div class="c-card-slide-hero__img-wrapper">
+                <picture>
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-desktop.webp 1x,
+                      @img/hero/2x/2x-digital-transformation-desktop.webp 2x
+                    "
+                    media="(min-width: 1440px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-desktop.jpg 1x,
+                      @img/hero/2x/2x-digital-transformation-desktop.jpg 2x
+                    "
+                    media="(min-width: 1440px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-small-desktop.webp 1x,
+                      @img/hero/2x/2x-digital-transformation-small-desktop.webp 2x
+                    "
+                    media="(min-width: 1024px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-small-desktop.jpg 1x,
+                      @img/hero/2x/2x-digital-transformation-small-desktop.jpg 2x
+                    "
+                    media="(min-width: 1024px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-tablet.webp 1x,
+                      @img/hero/2x/2x-digital-transformation-tablet.webp 2x
+                    "
+                    media="(min-width: 768px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-tablet.jpg 1x,
+                      @img/hero/2x/2x-digital-transformation-tablet.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-mobile.webp 1x,
+                      @img/hero/2x/2x-digital-transformation-mobile.webp 2x
+                    "
+                    media="(min-width: 360px)"
+                    type="image/webp"
+                  />
+                  <source
+                    srcset="
+                      @img/hero/1x/1x-digital-transformation-mobile.jpg 1x,
+                      @img/hero/2x/2x-digital-transformation-mobile.jpg 2x
+                    "
+                    media="(min-width: 360px)"
+                  />
+                  <img
+                    class="c-card-slide-hero__img"
+                    src="@img/hero/1x/1x-digital-transformation-desktop.jpg"
+                    alt="Цифровая трансформация бизнеса Украины"
+                    width="1272"
+                    height="466"
+                  />
+                </picture>
+              </div>
+              <div class="c-card-slide-hero__content">
+                <h2 class="c-card-slide-hero__title">
+                  Цифровая трансформация бизнеса Украины
+                </h2>
+                <p class="c-card-slide-hero__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                  sapiente quos perferendis ab commodi. Delectus, accusantium
+                  commodi ad temporibus ex ea necessitatibus adipisci!
+                </p>
+              </div>
+            </article>
+          </li>
+        </ul>
       </div>
     </div>
   </div>
