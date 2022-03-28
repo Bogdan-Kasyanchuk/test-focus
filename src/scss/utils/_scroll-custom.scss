@@ -1,5 +1,5 @@
 .u-scroll-custom {
-  scrollbar-color: #ed3237 rgba(255, 255, 255, 0.25);
+  scrollbar-color: getColor('accent') rgba(255, 255, 255, 0.25);
   scrollbar-width: thin;
 
   &::-webkit-scrollbar {
@@ -11,6 +11,6 @@
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #ed3237;
+    background-color: getColor('accent');
   }
 }

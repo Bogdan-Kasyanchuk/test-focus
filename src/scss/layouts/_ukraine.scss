@@ -1,0 +1,22 @@
+.b-ukraine {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.b-ukraine__item {
+  @include tablet {
+    grid-column: 1 / span 2;
+  }
+
+  @include min-desktop {
+    grid-column: 3 / span 2;
+  }
+}
+
+.b-ukraine__title {
+  margin-bottom: 30px;
+
+  @include max-mobile {
+    text-align: center;
+  }
+}

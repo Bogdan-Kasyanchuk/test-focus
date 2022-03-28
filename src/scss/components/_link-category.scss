@@ -1,0 +1,13 @@
+.c-link-category {
+  padding: 5px 15px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: getColor('secondary');
+  background-color: getColor('basic');
+}
+
+.c-link-category--lite {
+  color: getColor('basic');
+  background-color: getColor('secondary');
+}

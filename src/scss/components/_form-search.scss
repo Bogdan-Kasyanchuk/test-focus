@@ -1,0 +1,34 @@
+.c-form-search {
+  display: flex;
+}
+
+.c-form-search__input {
+  width: 213px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  border: 1px solid getColor('basic');
+  transition: border-color $time $function;
+
+  @include min-tablet {
+    width: 300px;
+  }
+
+  &::placeholder {
+    color: rgba(128, 128, 128, 0.6);
+    transition: color $time $function;
+  }
+
+  &:hover,
+  &:focus {
+    border-color: getColor('accent');
+
+    &::placeholder {
+      color: rgba(237, 50, 55, 0.6);
+    }
+  }
+}
+
+.c-form-search__button {
+  padding: 17px 30px;
+}

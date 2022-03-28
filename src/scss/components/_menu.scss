@@ -1,0 +1,22 @@
+.c-menu__item--margin-right--40 {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
+.c-menu__item--margin-bottom--10 {
+  &:not(:last-child) {
+    @include max-599 {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.c-menu__link {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
