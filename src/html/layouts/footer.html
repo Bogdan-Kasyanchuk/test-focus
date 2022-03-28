@@ -1,7 +1,7 @@
-<footer class="footer">
-  <div class="my-container footer__my-container">
-    <a href="#" class="c-logo footer__logo">
-      <picture>
+<footer class="b-footer">
+  <div class="b-footer__container c-container">
+    <a class="b-footer__logo" href="#">
+      <picture class="b-footer__picture">
         <source
           srcset="
             @img/logo/1x/1x-logo-footer.webp 1x,
@@ -16,46 +16,48 @@
           "
         />
         <img
-          class="c-logo__img"
+          class="b-footer__img"
           src="@img/logo/1x/1x-logo-footer.png"
+          loading="lazy"
           alt="Логотип"
           width="184"
           height="40"
         /> </picture
     ></a>
-    <div class="footer__main">
-      <ul class="c-menu-footer footer__menu">
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Политика</a>
+    <div class="b-footer__head">
+      <ul class="b-footer__menu">
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Политика</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Украина</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Украина</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Экономика</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Экономика</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Культура</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Культура</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Мнение</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Мнение</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Рейтинги</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Рейтинги</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Длинный фокус</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Длинный фокус</a>
         </li>
-        <li class="c-menu-footer__item">
-          <a href="#" class="c-menu-footer__link">Мир</a>
+        <li class="b-footer__item">
+          <a class="b-footer__link" href="#">Мир</a>
         </li>
       </ul>
-      <div class="footer__focus">
-        <ul class="footer__focus-list">
-          <li class="footer__focus-item">
+      <div class="b-footer__subscription-wrapper">
+        <ul class="b-footer__focus-list">
+          <li class="b-footer__focus-item">
             <article class="c-focus-card">
-              <a href="#" class="c-focus-card__link">
-                <picture>
+              <h3 class="u-visually-hidden">Фокус</h3>
+              <a class="c-focus-card__link" href="#">
+                <picture class="c-focus-card__picture">
                   <source
                     srcset="
                       @img/footer/1x/1x-focus-6.webp 1x,
@@ -72,6 +74,7 @@
                   <img
                     class="c-focus-card__img"
                     src="@img/footer/1x/1x-focus-6.jpg"
+                    loading="lazy"
                     alt="Фокус"
                     width="85"
                     height="111"
@@ -80,10 +83,11 @@
               </a>
             </article>
           </li>
-          <li class="footer__focus-item">
+          <li class="b-footer__focus-item">
             <article class="c-focus-card">
-              <a href="#" class="c-focus-card__link">
-                <picture>
+              <h3 class="u-visually-hidden">Фокус</h3>
+              <a class="c-focus-card__link" href="#">
+                <picture class="c-focus-card__picture">
                   <source
                     srcset="
                       @img/footer/1x/1x-focus-7.webp 1x,
@@ -100,6 +104,7 @@
                   <img
                     class="c-focus-card__img"
                     src="@img/footer/1x/1x-focus-7.jpg"
+                    loading="lazy"
                     alt="Фокус"
                     width="79"
                     height="111"
@@ -108,10 +113,11 @@
               </a>
             </article>
           </li>
-          <li class="footer__focus-item">
+          <li class="b-footer__focus-item">
             <article class="c-focus-card">
-              <a href="#" class="c-focus-card__link">
-                <picture>
+              <h3 class="u-visually-hidden">Фокус</h3>
+              <a class="c-focus-card__link" href="#">
+                <picture class="c-focus-card__picture">
                   <source
                     srcset="
                       @img/footer/1x/1x-focus-8.webp 1x,
@@ -128,6 +134,7 @@
                   <img
                     class="c-focus-card__img"
                     src="@img/footer/1x/1x-focus-8.jpg"
+                    loading="lazy"
                     alt="Фокус"
                     width="84"
                     height="111"
@@ -137,48 +144,50 @@
             </article>
           </li>
         </ul>
-        <div class="footer__subscription">
-          <p class="footer__text">Гарантировано получите скидку -10%</p>
-          <button class="button footer__button" type="button">
+        <div class="b-footer__subscription">
+          <p class="b-footer__subscription-text">
+            Гарантировано получите скидку -10%
+          </p>
+          <button class="b-footer__button c-button" type="button">
             Подписаться
           </button>
         </div>
       </div>
     </div>
-    <div class="footer__content-list">
-      <div class="footer__content-item">
-        <p class="footer__content">
+    <div class="b-footer__content-wrapper">
+      <div class="b-footer__content-inner-wrapper">
+        <p class="b-footer__content">
           Все права на материалы, опубликованные на данном ресурсе, принадлежат
           ООО "ФОКУС МЕДИА". Какое-либо использование материалов без письменного
           разрешения ООО "ФОКУС МЕДИА" - запрещено. При использовании материалов
           с данного ресурса гиперссылка focus.ua обязательна.
         </p>
-        <p class="footer__content">
+        <p class="b-footer__content">
           Данный ресурс — для пользователей возрастом от 18 лет и старше.
         </p>
       </div>
-      <div class="footer__content-item">
-        <p class="footer__content">
+      <div class="b-footer__content-inner-wrapper">
+        <p class="b-footer__content">
           Перепечатка, копирование или воспроизведение информации, содержащей
           ссылку на агентство ИнА "Українські Новини", в каком-либо виде строго
           запрещены.
         </p>
-        <p class="footer__content">
+        <p class="b-footer__content">
           Все материалы, которые размещены на этом сайте со ссылкой на агентство
           "Интерфакс-Украина", не подлежат дальнейшему воспроизведению и/или
           распространению в любой форме, кроме как с письменного разрешения
           агентства.
         </p>
-        <p class="footer__content">
+        <p class="b-footer__content">
           Материалы с плашками "Р", "Новости партнеров", "Новости компаний",
           "Новости партий", "Инновации", "Позиция", "Спецпроект при поддержке"
           публикуются на коммерческой основе.
         </p>
       </div>
     </div>
-    <div class="footer__copyright">
-      <p class="footer__copyright-text">© 2020 Фокус. Все права защищены.</p>
-      <p class="footer__copyright-text">Політика конфіденційності</p>
+    <div class="b-footer__copyright">
+      <p class="b-footer__copyright-text">© 2020 Фокус. Все права защищены.</p>
+      <p class="b-footer__copyright-text">Політика конфіденційності</p>
     </div>
   </div>
 </footer>

@@ -1,0 +1,16 @@
+.b-special-topic {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.b-special-topic__card-topic {
+  height: 400px;
+
+  @include min-tablet {
+    height: 225px;
+  }
+
+  @include min-desktop {
+    height: 302px;
+  }
+}

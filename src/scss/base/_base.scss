@@ -1,17 +1,62 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+}
+
 html {
   height: 100%;
+  line-height: 1;
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'CeraPro';
+  height: 100%;
+  font-family: 'CeraPro', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: left;
+  color: getColor('basic');
+}
+
+// body {
+//   overflow: hidden;
+// }
+
+h1,
+h2,
+h3,
+button,
+input {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
   display: block;
-  height: auto;
   max-width: 100%;
+  height: auto;
   object-fit: cover;
+}
+
+button,
+input {
+  font-family: inherit;
+  color: inherit;
+  transition: color $time $function;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
 }
 
 button {
@@ -21,4 +66,12 @@ button {
 
 a {
   display: block;
+  color: inherit;
+  text-decoration: none;
+  transition: color $time $function;
+
+  &:hover,
+  &:focus {
+    color: getColor('accent');
+  }
 }

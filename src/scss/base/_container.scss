@@ -1,8 +1,8 @@
-.my-container {
+.c-container {
+  width: 100%;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
-  width: 100%;
 
   @include min-mobile {
     width: $min-mobile;
@@ -18,7 +18,7 @@
     width: $min-small-desktop;
   }
 
-  @include desktop {
+  @include min-desktop {
     width: $desktop;
     padding-left: 84px;
     padding-right: 84px;

@@ -1,0 +1,26 @@
+.c-language {
+  display: flex;
+  align-items: center;
+}
+
+.c-language__item {
+  &:not(:last-child) {
+    @include min-tablet {
+      margin-right: 10px;
+    }
+  }
+}
+
+.c-language__item--active {
+  @include max-mobile {
+    display: none;
+  }
+}
+
+.c-language__link {
+  padding: 8px 6px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}

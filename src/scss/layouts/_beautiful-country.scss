@@ -1,0 +1,12 @@
+.b-beautiful-country {
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+
+.b-beautiful-country__title {
+  margin-bottom: 30px;
+
+  @include max-mobile {
+    text-align: center;
+  }
+}
