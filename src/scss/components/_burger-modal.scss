@@ -7,11 +7,19 @@
   padding-top: 92px;
   padding-bottom: 15px;
   background-color: getColor('secondary');
+  pointer-events: initial;
+  transform: translateY(0);
+  transition: transform $time $function;
 
   @include max-599 {
     height: 100%;
     overflow: auto;
   }
+}
+
+.c-burger-modal--hidden {
+  transform: translateY(-100%);
+  pointer-events: none;
 }
 
 .b-burger-modal__container {

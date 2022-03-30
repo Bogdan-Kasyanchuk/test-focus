@@ -15,16 +15,16 @@
   }
 
   &::placeholder {
-    color: rgba(128, 128, 128, 0.6);
+    color: rgba(128, 128, 128, 0.5);
     transition: color $time $function;
   }
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     border-color: getColor('accent');
 
     &::placeholder {
-      color: rgba(237, 50, 55, 0.6);
+      color: rgba(237, 50, 55, 0.5);
     }
   }
 }

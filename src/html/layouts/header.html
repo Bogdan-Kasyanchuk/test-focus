@@ -2,13 +2,13 @@
   <div class="b-header__container c-container">
     <h1 class="u-visually-hidden">Фокус - новости в Украине и мире</h1>
     <button
-      class="b-header__button-burger c-button-burger c-button-burger--active"
+      class="b-header__button-burger c-button-burger js-button-burger"
       type="button"
       aria-label="Menu"
     >
       <span class="c-button-burger__line"></span>
     </button>
-    <a class="b-header__logo" href="/index.html">
+    <a class="b-header__logo" href="./index.html">
       <picture class="b-header__picture">
         <source
           srcset="
@@ -47,29 +47,39 @@
         <a class="c-menu__link" href="#subscription">Подписка</a>
       </li>
     </ul>
-    <ul class="b-header__language c-language">
-      <li class="c-language__item">
-        <a class="c-language__link" href="#">ua</a>
+    <ul class="b-header__language c-language js-language">
+      <li class="c-language__item c-language__item--hidden">
+        <a class="c-language__link js-language__link" href="#">ua</a>
       </li>
-      <li class="c-language__item c-language__item--active">
-        <a class="c-language__link" href="#">ru</a>
+      <li class="c-language__item">
+        <a
+          class="c-language__link c-language__link--active js-language__link"
+          href="#"
+          >ru</a
+        >
       </li>
     </ul>
-    <button class="c-button-search" type="submit" aria-label="Search">
+    <button
+      class="c-button-search js-button-search"
+      type="button"
+      aria-label="Search"
+    >
       <svg class="c-button-search__icon" width="20" height="20">
         <use href="@img/icons/icons.svg#search"></use>
       </svg>
     </button>
-    <form class="b-header__form-search c-form-search u-visually-hidden">
-      <input
-        class="c-form-search__input"
-        type="text"
-        autocomplete="off"
-        placeholder="Поиск по сайту"
-      />
-      <button class="c-form-search__button c-button" type="submit">
-        Найти
-      </button>
-    </form>
+    <div class="c-backdrop c-backdrop--hidden js-backdrop-form-search">
+      <form class="b-header__form-search c-form-search js-form-search">
+        <input
+          class="c-form-search__input"
+          type="text"
+          autocomplete="off"
+          placeholder="Поиск по сайту"
+        />
+        <button class="c-form-search__button c-button" type="submit">
+          Найти
+        </button>
+      </form>
+    </div>
   </div>
 </header>
