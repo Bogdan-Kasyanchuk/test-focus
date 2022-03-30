@@ -1,31 +1,38 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+* {
   margin: 0;
   padding: 0;
   border: 0;
   outline: none;
 }
 
-html {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
   height: 100%;
-  line-height: 1;
+}
+
+html {
   scroll-behavior: smooth;
 }
 
 body {
-  height: 100%;
   font-family: 'CeraPro', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  text-align: left;
+  line-height: 1;
   color: getColor('basic');
 }
 
-// body {
-//   overflow: hidden;
-// }
+body.overflow-hidden {
+  @include max-599 {
+    overflow: hidden;
+  }
+}
 
 h1,
 h2,
@@ -54,7 +61,7 @@ input {
   transition: color $time $function;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: getColor('accent');
   }
 }
@@ -71,7 +78,7 @@ a {
   transition: color $time $function;
 
   &:hover,
-  &:focus {
+  &:focus-visible {
     color: getColor('accent');
   }
 }

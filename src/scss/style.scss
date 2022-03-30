@@ -8,7 +8,7 @@
 @import './utils/scroll-custom';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './mixins/breakpoint';
-@import './mixins/font-size-rem';
+@import './mixins/rem';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './base/base';
 @import './base/container';
@@ -19,6 +19,7 @@
 @import './components/language-switcher';
 @import './components/button-search';
 @import './components/form-search';
+@import './components/backdrop';
 @import './components/button';
 @import './components/card-tab-hero';
 @import './components/card-category';

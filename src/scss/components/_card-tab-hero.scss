@@ -8,7 +8,7 @@
   padding: 12px;
 
   &:hover .c-card-tab-hero__text,
-  &:focus .c-card-tab-hero__text {
+  &:focus-visible .c-card-tab-hero__text {
     color: getColor('accent');
   }
 

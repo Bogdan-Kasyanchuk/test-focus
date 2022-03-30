@@ -7,6 +7,8 @@
   "scripts": {
     "dev": "gulp",
     "build": "gulp build --build --public-url /test-focus/",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build",
     "zip": "gulp deployZip --build",
     "prepare": "husky install"
   },
@@ -19,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/Bogdan-Kasyanchuk/test-focus/issues"
   },
-  "homepage": "https://github.com/Bogdan-Kasyanchuk/test-focus#readme",
+  "homepage": "https://github.com/Bogdan-Kasyanchuk/test-focus",
   "devDependencies": {
     "browser-sync": "^2.27.7",
     "del": "^6.0.0",
@@ -58,6 +60,9 @@
     "webpack-stream": "^7.0.0"
   },
   "lint-staged": {
-    "*.js": "eslint --fix"
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

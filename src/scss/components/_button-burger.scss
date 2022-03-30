@@ -10,6 +10,7 @@
     width: 28px;
     height: 3px;
     background-color: currentColor;
+    transition: transform $time $function, top $time $function;
   }
 
   &::before {
@@ -29,9 +30,13 @@
   height: 3px;
   background-color: currentColor;
   transform: translateY(-50%);
+  pointer-events: none;
+  transition: transform $time $function;
 }
 
 .c-button-burger--active {
+  transition: transform $time $function;
+
   &::before {
     top: 46%;
     transform: rotate(45deg);

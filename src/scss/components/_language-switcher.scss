@@ -11,8 +11,8 @@
   }
 }
 
-.c-language__item--active {
-  @include max-mobile {
+.c-language__item--hidden {
+  @include max-479 {
     display: none;
   }
 }
@@ -23,4 +23,9 @@
   font-size: 20px;
   line-height: 1.2;
   text-transform: uppercase;
+  transition: color $time $function;
+}
+
+.c-language__link--active {
+  color: getColor('accent');
 }

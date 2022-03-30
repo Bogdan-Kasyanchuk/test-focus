@@ -1,0 +1,17 @@
+.c-backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background-color: rgba(0, 0, 0, 0.05);
+  pointer-events: initial;
+  transition: opacity $time $function, visibility $time $function;
+}
+
+.c-backdrop--hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
