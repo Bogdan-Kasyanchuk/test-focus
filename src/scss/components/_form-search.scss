@@ -3,15 +3,15 @@
 }
 
 .c-form-search__input {
-  width: 213px;
+  max-width: 190px;
   padding: 10px;
   font-weight: 500;
   font-size: 20px;
   border: 1px solid getColor('basic');
   transition: border-color $time $function;
 
-  @include min-tablet {
-    width: 300px;
+  @include min-480 {
+    max-width: 300px;
   }
 
   &::placeholder {
@@ -30,5 +30,5 @@
 }
 
 .c-form-search__button {
-  padding: 17px 30px;
+  padding: 17px 26px;
 }

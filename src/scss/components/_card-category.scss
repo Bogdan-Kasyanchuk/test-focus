@@ -1,6 +1,5 @@
 .c-card-category {
   position: relative;
-  width: 100%;
   height: 100%;
   padding: 15px;
 }
@@ -9,7 +8,15 @@
   position: relative;
   z-index: 2;
   display: inline-block;
-  margin-bottom: 100px;
+  margin-bottom: 30px;
+
+  @include min-480 {
+    margin-bottom: 50px;
+  }
+
+  @include min-600 {
+    margin-bottom: 90px;
+  }
 
   @include min-small-desktop {
     margin-bottom: 115px;
@@ -20,7 +27,7 @@
   }
 }
 
-.c-card-category__category--margin-bottom--20 {
+.c-card-category__category--mb--20 {
   margin-bottom: 20px;
 }
 
@@ -29,13 +36,28 @@
   top: 0;
   left: 0;
   z-index: -1;
+  height: 100%;
 }
 
-.c-card-category__content--text-align--center {
+.c-card-category__img {
+  height: 100%;
+}
+
+.c-card-category__content--plr--25 {
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include min-mobile {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+.c-card-category__content--ta--center {
   text-align: center;
 }
 
-.c-card-category__content--width--610 {
+.c-card-category__content--w--610 {
   @include min-small-desktop {
     width: 610px;
   }
@@ -43,10 +65,14 @@
 
 .c-card-category__title {
   margin-bottom: 15px;
+
+  @include min-small-desktop {
+    margin-bottom: 20px;
+  }
 }
 
-.c-card-category__title--margin-bottom--25 {
-  margin-bottom: 25px;
+.c-card-category__title--mb--20 {
+  margin-bottom: 20px;
 
   @include min-small-desktop {
     margin-bottom: 30px;
@@ -64,7 +90,6 @@
   }
 
   @include min-small-desktop {
-    margin-bottom: 20px;
     font-size: 54px;
   }
 }
@@ -104,7 +129,7 @@
   top: 0;
   width: 50%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
   border-bottom: 2px solid getColor('accent');
 
   @include min-tablet {

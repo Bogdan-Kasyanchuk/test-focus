@@ -10,4 +10,8 @@
   @include max-mobile {
     width: 330px;
   }
+
+  &:focus-visible {
+    outline: 1px solid getColor('accent');
+  }
 }

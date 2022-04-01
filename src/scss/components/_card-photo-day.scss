@@ -3,20 +3,11 @@
   height: 100%;
   border-bottom: 1px solid getColor('border');
 
-  @include tablet {
+  @include min-tablet {
     display: flex;
     flex-direction: column;
     justify-content: end;
-    padding-bottom: 77px;
-    padding-left: 15px;
-    border-bottom: none;
-  }
-
-  @include min-desktop {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-bottom: 77px;
+    padding-bottom: 75px;
     padding-left: 15px;
     border-bottom: none;
   }
@@ -30,14 +21,7 @@
 }
 
 .c-card-photo-day__picture {
-  @include tablet {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-
-  @include min-desktop {
+  @include min-tablet {
     position: absolute;
     top: 0;
     left: 0;
@@ -46,7 +30,9 @@
 }
 
 .c-card-photo-day__title {
-  padding-top: 10px;
+  @include max-mobile {
+    padding-top: 10px;
+  }
 }
 
 .c-card-photo-day__link {
@@ -54,15 +40,7 @@
   font-size: 20px;
   line-height: 1.2;
 
-  @include tablet {
-    width: 400px;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1.25;
-    color: getColor('secondary');
-  }
-
-  @include min-desktop {
+  @include min-tablet {
     width: 400px;
     font-weight: 700;
     font-size: 24px;

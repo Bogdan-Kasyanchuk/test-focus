@@ -8,15 +8,12 @@
 
 .c-slider-popular__list {
   display: flex;
+  column-gap: 24px;
 }
 
 .c-slider-popular__item {
   min-width: 300px;
   height: 292px;
-
-  &:not(:last-child) {
-    margin-right: 24px;
-  }
 }
 
 .c-slider-popular__button-arrow {
@@ -24,7 +21,7 @@
   top: 50%;
   transform: translateY(-50%);
 
-  @include max-mobile {
+  @include max-tablet {
     display: none;
   }
 }
