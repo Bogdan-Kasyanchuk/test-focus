@@ -13,13 +13,8 @@
 }
 
 .b-header__container {
-  position: relative;
   display: flex;
   align-items: center;
-
-  @include max-mobile {
-    width: 100%;
-  }
 
   @include min-tablet {
     padding-right: 15px;
@@ -35,18 +30,18 @@
 .b-header__button-burger {
   width: 40px;
   height: 40px;
-  margin-right: 16px;
+  margin-right: 15px;
 }
 
 .b-header__logo {
   margin-right: auto;
 
   @include min-small-desktop {
-    margin-right: 30px;
+    margin-right: calc((100% - 567px) / 2 - 190px);
   }
 
-  @include min-desktop {
-    margin-right: 222px;
+  &:focus-visible {
+    outline: 1px solid getColor('accent');
   }
 }
 
@@ -68,18 +63,22 @@
 .b-header__form-search {
   position: absolute;
   top: 82px;
-  right: calc((100vw - $min-mobile + 30px) / 2);
+  right: 10px;
   z-index: 999;
 
+  @include min-mobile {
+    right: 15px;
+  }
+
   @include min-tablet {
-    right: calc((100vw - $min-tablet + 76px) / 2);
+    right: calc((100vw - $min-tablet) / 2 + 15px);
   }
 
   @include min-small-desktop {
-    right: calc((100vw - $min-small-desktop + 76px) / 2);
+    right: calc((100vw - $min-small-desktop) / 2 + 38px);
   }
 
   @include min-desktop {
-    right: calc((100vw - $desktop + 168px) / 2);
+    right: calc((100vw - $desktop) / 2 + 84px);
   }
 }

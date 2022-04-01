@@ -1,8 +1,4 @@
 .b-burger-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
   width: 100%;
   padding-top: 92px;
   padding-bottom: 15px;
@@ -48,8 +44,8 @@
   @include min-600 {
     display: flex;
     flex-wrap: wrap;
-    margin-top: -10px;
-    margin-left: -40px;
+    row-gap: 10px;
+    column-gap: 40px;
   }
 }
 
@@ -58,11 +54,6 @@
     @include max-599 {
       margin-bottom: 10px;
     }
-  }
-
-  @include min-600 {
-    margin-top: 10px;
-    margin-left: 40px;
   }
 }
 

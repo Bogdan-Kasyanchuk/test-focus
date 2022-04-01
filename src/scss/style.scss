@@ -8,7 +8,6 @@
 @import './utils/scroll-custom';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './mixins/breakpoint';
-@import './mixins/rem';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './base/base';
 @import './base/container';
@@ -30,13 +29,13 @@
 @import './components/card-topic';
 @import './components/card-news';
 @import './components/card-opinion';
+@import './components/card-advertising-small';
 @import './components/title-block';
 @import './components/button-arrow';
 @import './components/card-rating';
 @import './components/slider-ratings';
 @import './components/card-photo-day';
 @import './components/slider-popular';
-@import './components/card-focus';
 @import './components/slider-focus';
 @import './components/card-advertising';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++

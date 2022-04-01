@@ -8,29 +8,16 @@
 
 .c-slider-ratings__list {
   display: flex;
+  column-gap: 24px;
 }
 
 .c-slider-ratings__item {
   min-width: 300px;
-  height: 378px;
-
-  &:not(:last-child) {
-    margin-right: 24px;
-  }
-
-  @include min-tablet {
-    min-width: 334px;
-    height: 421px;
-  }
-
-  @include min-small-desktop {
-    min-width: 300px;
-    height: 378px;
-  }
+  min-height: 378px;
 
   @include min-desktop {
     min-width: 408px;
-    height: 514px;
+    min-height: 514px;
   }
 }
 
@@ -39,7 +26,7 @@
   top: 50%;
   transform: translateY(-50%);
 
-  @include max-mobile {
+  @include max-tablet {
     display: none;
   }
 }

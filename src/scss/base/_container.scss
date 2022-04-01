@@ -1,21 +1,23 @@
 .c-container {
   width: 100%;
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @include min-mobile {
-    width: $min-mobile;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   @include min-tablet {
     width: $min-tablet;
-    padding-left: 38px;
-    padding-right: 38px;
   }
 
   @include min-small-desktop {
     width: $min-small-desktop;
+    padding-left: 38px;
+    padding-right: 38px;
   }
 
   @include min-desktop {

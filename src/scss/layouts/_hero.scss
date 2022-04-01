@@ -1,6 +1,6 @@
 .b-hero {
-  padding-top: 97px;
-  padding-bottom: 20px;
+  padding-top: 102px;
+  padding-bottom: 25px;
 }
 
 .b-hero__tab-list {
@@ -8,27 +8,24 @@
 
   @include min-tablet {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 26px;
-  }
-
-  @include max-tablet {
-    justify-content: space-around;
-    margin-top: -24px;
+    margin-bottom: 20px;
   }
 }
 
 .b-hero__tab-item {
-  width: 300px;
-  height: 60px;
-  cursor: pointer;
-
-  @include max-tablet {
-    margin-top: 24px;
+  @include min-tablet {
+    flex-basis: calc((100% - 58px) / 4);
+    min-height: 60px;
+    cursor: pointer;
   }
 
-  @include small-desktop {
-    width: 219px;
+  @include min-small-desktop {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+
+  &:hover .c-card-tab-hero__text,
+  &:focus-visible .c-card-tab-hero__text {
+    color: getColor('accent');
   }
 }

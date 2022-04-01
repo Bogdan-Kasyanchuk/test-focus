@@ -1,0 +1,5 @@
+.c-card-advertising-small__link {
+  &:focus-visible {
+    outline: 1px solid getColor('accent');
+  }
+}

@@ -2,7 +2,6 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   height: 100%;
   padding: 15px 30px 30px;
@@ -12,7 +11,7 @@
 .c-card-opinion__link-category {
   position: relative;
   z-index: 2;
-  margin-bottom: 66px;
+  margin-bottom: 65px;
   padding: 6px;
   font-weight: 700;
   font-size: 14px;

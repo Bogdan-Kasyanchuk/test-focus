@@ -12,18 +12,14 @@
 
 .c-slider-focus__item {
   min-width: 100%;
-  height: 300px;
-
-  @include min-tablet {
-    height: 250px;
-  }
+  min-height: 250px;
 
   @include min-small-desktop {
-    height: 300px;
+    min-height: 300px;
   }
 
   @include min-desktop {
-    height: 400px;
+    min-height: 400px;
   }
 }
 

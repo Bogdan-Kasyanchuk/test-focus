@@ -4,13 +4,13 @@
 }
 
 .b-special-topic__card-topic {
-  height: 400px;
+  min-height: 375px;
 
-  @include min-tablet {
-    height: 225px;
+  @include min-480 {
+    min-height: 250px;
   }
 
   @include min-desktop {
-    height: 302px;
+    min-height: 302px;
   }
 }
