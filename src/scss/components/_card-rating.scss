@@ -41,22 +41,11 @@
 }
 
 .c-card-rating__link-category {
-  position: relative;
-  z-index: 2;
   margin-bottom: 25px;
-  padding: 6px;
-  font-weight: 700;
-  font-size: 14px;
-  text-transform: uppercase;
-  color: getColor('secondary');
 
   @include min-desktop {
     margin-bottom: 35px;
   }
-}
-
-.c-card-rating__link-category--dark {
-  color: getColor('basic');
 }
 
 .c-card-rating__number {
