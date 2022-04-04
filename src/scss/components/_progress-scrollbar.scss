@@ -1,0 +1,15 @@
+.c-progress__scrollbar {
+  position: absolute;
+  right: 0;
+  bottom: -30px;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: rgba(237, 50, 55, 0.1);
+  transform: translateY(-50%);
+}
+
+.c-progress__scrollbar-drag {
+  height: 100%;
+  background-color: getColor('accent');
+}

@@ -1,9 +1,11 @@
+@import '../../node_modules/modern-normalize/modern-normalize';
 @import './fonts';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
 @import './utils/breakpoints';
 @import './utils/variables';
 @import './utils/colors';
 @import './utils/link';
+@import './utils/picture-absolute';
 @import './utils/visually-hidden';
 @import './utils/scroll-custom';
 // +++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -21,6 +23,7 @@
 @import './components/backdrop';
 @import './components/button';
 @import './components/card-tab-hero';
+@import './components/progress-loading';
 @import './components/card-category';
 @import './components/slider-hero';
 @import './components/grid-list';
@@ -28,9 +31,11 @@
 @import './components/card-category-small';
 @import './components/card-topic';
 @import './components/card-news';
+@import './components/link-category-without-bgc';
 @import './components/card-opinion';
 @import './components/card-advertising-small';
 @import './components/title-block';
+@import './components/progress-scrollbar';
 @import './components/button-arrow';
 @import './components/card-rating';
 @import './components/slider-ratings';

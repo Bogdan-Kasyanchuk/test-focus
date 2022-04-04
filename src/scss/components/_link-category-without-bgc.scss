@@ -1,0 +1,13 @@
+.c-link-category-without-bgc {
+  position: relative;
+  z-index: 2;
+  padding: 6px;
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: getColor('secondary');
+}
+
+.c-link-category-without-bgc--dark {
+  color: getColor('basic');
+}

@@ -32,10 +32,6 @@
 }
 
 .c-card-category__picture {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
   height: 100%;
 }
 
@@ -115,22 +111,21 @@
 
 .c-card-category__text--typography {
   font-weight: 400;
-  font-size: 20px;
-  line-height: 1.2;
+  font-size: 18px;
+  line-height: 1.1;
 
-  @include max-mobile {
+  @include max-599 {
     display: none;
+  }
+
+  @include min-tablet {
+    font-size: 20px;
+    line-height: 1.2;
   }
 }
 
 .c-card-category__progress {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-bottom: 2px solid getColor('accent');
+  width: 35%;
 
   @include min-tablet {
     display: none;
