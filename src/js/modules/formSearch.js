@@ -4,7 +4,10 @@ import { burgerModal } from './burgerModal.js';
 const { backdropFormSearchEl, formSearchEl, buttonSearchEl, burgerModalEl } =
   refs;
 
-buttonSearchEl.addEventListener('click', formSearch);
+addEventListener('DOMContentLoaded', () => {
+  buttonSearchEl.addEventListener('click', formSearch);
+  addEventListener('unload', clearListener);
+});
 
 function formSearch(event) {
   if (
@@ -32,4 +35,8 @@ function formSearch(event) {
 function form(event) {
   event.preventDefault();
   console.log(event.target[0].value);
+}
+
+function clearListener() {
+  buttonSearchEl.removeEventListener('click', formSearch);
 }

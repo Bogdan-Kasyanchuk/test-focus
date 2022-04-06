@@ -1,5 +1,7 @@
 .c-slider-focus {
   position: relative;
+  user-select: none;
+  touch-action: pan-y pinch-zoom;
 }
 
 .c-slider-focus__container {
@@ -8,6 +10,7 @@
 
 .c-slider-focus__list {
   display: flex;
+  transform: translateX(-100%);
 }
 
 .c-slider-focus__item {

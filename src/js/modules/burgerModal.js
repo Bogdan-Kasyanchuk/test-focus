@@ -2,7 +2,10 @@ import refs from '../refs.js';
 
 const { bodyEl, backdropBurgerModalEl, buttonBurgerEl, burgerModalEl } = refs;
 
-buttonBurgerEl.addEventListener('click', burgerModal);
+addEventListener('DOMContentLoaded', () => {
+  buttonBurgerEl.addEventListener('click', burgerModal);
+  addEventListener('unload', clearListener);
+});
 
 export function burgerModal(event) {
   if (
@@ -24,4 +27,8 @@ export function burgerModal(event) {
   } else {
     backdropBurgerModalEl.removeEventListener('click', burgerModal);
   }
+}
+
+function clearListener() {
+  buttonBurgerEl.removeEventListener('click', burgerModal);
 }
