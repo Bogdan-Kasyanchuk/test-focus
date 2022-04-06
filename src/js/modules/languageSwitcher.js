@@ -1,15 +1,23 @@
 import refs from '../refs.js';
 
-const { languageEl } = refs;
+const { languageEl, languageLinkEl } = refs;
 
-languageEl.addEventListener('click', setLanguage);
+addEventListener('DOMContentLoaded', () => {
+  languageEl.addEventListener('click', toggleLanguage);
+  addEventListener('unload', clearListener);
+});
 
-const languageLinkEl = languageEl.querySelectorAll('.js-language__link');
+function toggleLanguage(event) {
+  if (!event.target.classList.contains('c-language__link')) {
+    return;
+  }
 
-function setLanguage(event) {
-  if (!event.target.classList.contains('c-language__link')) return;
   languageLinkEl.forEach(element => {
     element.parentElement.classList.toggle('c-language__item--hidden');
     element.classList.toggle('c-language__link--active');
   });
+}
+
+function clearListener() {
+  languageEl.removeEventListener('click', toggleLanguage);
 }

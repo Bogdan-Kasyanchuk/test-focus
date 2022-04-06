@@ -2,6 +2,7 @@
   position: relative;
   height: 100%;
   padding: 15px;
+  cursor: pointer;
 }
 
 .c-card-category__category {
@@ -25,6 +26,10 @@
   @include min-desktop {
     margin-bottom: 170px;
   }
+}
+
+.c-card-category__link {
+  pointer-events: none;
 }
 
 .c-card-category__category--mb--20 {
