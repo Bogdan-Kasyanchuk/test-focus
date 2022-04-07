@@ -28,10 +28,6 @@
   }
 }
 
-.c-card-category__link {
-  pointer-events: none;
-}
-
 .c-card-category__category--mb--20 {
   margin-bottom: 20px;
 }
@@ -42,6 +38,10 @@
 
 .c-card-category__img {
   height: 100%;
+}
+
+.c-card-category__content {
+  pointer-events: none;
 }
 
 .c-card-category__content--plr--25 {
@@ -130,8 +130,6 @@
 }
 
 .c-card-category__progress {
-  width: 35%;
-
   @include min-tablet {
     display: none;
   }

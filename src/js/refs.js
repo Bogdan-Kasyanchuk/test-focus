@@ -8,5 +8,7 @@ export default {
   backdropFormSearchEl: document.querySelector('.js-backdrop-form-search'),
   formSearchEl: document.querySelector('.js-form-search'),
   buttonSearchEl: document.querySelector('.js-button-search'),
+  sliderTabHeroEl: document.querySelector('.js-hero__tab-list'),
+  sliderHeroEl: document.querySelector('.js-slider-hero'),
   sliderFocusEl: document.querySelector('.js-slider-focus'),
 };
