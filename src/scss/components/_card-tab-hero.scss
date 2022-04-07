@@ -36,13 +36,10 @@
     text-align: center;
     color: getColor('secondary');
     transition: color $time $function;
+    pointer-events: none;
   }
 
   @include min-desktop {
     font-size: 16px;
   }
-}
-
-.c-card-tab-hero__progress {
-  width: 35%;
 }

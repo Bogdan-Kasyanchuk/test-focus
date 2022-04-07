@@ -1,7 +1,7 @@
 <section class="b-hero">
   <div class="c-container">
     <h2 class="u-visually-hidden">Главный блок</h2>
-    <ul class="b-hero__tab-list">
+    <ul class="b-hero__tab-list js-hero__tab-list">
       <li class="b-hero__tab-item">
         <div class="c-card-tab-hero">
           <picture class="c-card-tab-hero__picture u-picture-absolute">
@@ -60,7 +60,7 @@
             />
           </picture>
           <p class="c-card-tab-hero__text">Леди в законе</p>
-          <div class="c-card-tab-hero__progress c-progress-loading"></div>
+          <div class="c-card-tab-hero__progress c-progress"></div>
         </div>
       </li>
       <li class="b-hero__tab-item">
@@ -121,7 +121,7 @@
             />
           </picture>
           <p class="c-card-tab-hero__text">Взрыв на Позняках в Киеве</p>
-          <div class="c-card-tab-hero__progress c-progress-loading"></div>
+          <div class="c-card-tab-hero__progress c-progress"></div>
         </div>
       </li>
       <li class="b-hero__tab-item">
@@ -182,7 +182,7 @@
             />
           </picture>
           <p class="c-card-tab-hero__text">Потоп на западной Украине</p>
-          <div class="c-card-tab-hero__progress c-progress-loading"></div>
+          <div class="c-card-tab-hero__progress c-progress"></div>
         </div>
       </li>
       <li class="b-hero__tab-item">
@@ -247,13 +247,113 @@
           <p class="c-card-tab-hero__text">
             Цифровая трансформация бизнеса Украины
           </p>
-          <div class="c-card-tab-hero__progress c-progress-loading"></div>
+          <div class="c-card-tab-hero__progress c-progress"></div>
         </div>
       </li>
     </ul>
-    <div class="c-slider-hero">
+    <div class="c-slider-hero js-slider-hero">
       <div class="c-slider-hero__container">
         <ul class="c-slider-hero__list">
+          <li class="c-slider-hero__item">
+            <article class="c-card-category">
+              <a
+                class="c-card-category__category c-card-category__category--mb--20 c-link-category c-link-category--lite"
+                href="#"
+                >Технологии и наука</a
+              >
+              <picture class="c-card-category__picture u-picture-absolute">
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-desktop.webp 1x,
+                    @img/hero/2x/2x-digital-transformation-desktop.webp 2x
+                  "
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-desktop.jpg 1x,
+                    @img/hero/2x/2x-digital-transformation-desktop.jpg 2x
+                  "
+                  media="(min-width: 1440px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-small-desktop.webp 1x,
+                    @img/hero/2x/2x-digital-transformation-small-desktop.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-small-desktop.jpg 1x,
+                    @img/hero/2x/2x-digital-transformation-small-desktop.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-tablet.webp 1x,
+                    @img/hero/2x/2x-digital-transformation-tablet.webp 2x
+                  "
+                  media="(min-width: 481px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-tablet.jpg 1x,
+                    @img/hero/2x/2x-digital-transformation-tablet.jpg 2x
+                  "
+                  media="(min-width: 481px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-mobile.webp 1x,
+                    @img/hero/2x/2x-digital-transformation-mobile.webp 2x
+                  "
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-digital-transformation-mobile.jpg 1x,
+                    @img/hero/2x/2x-digital-transformation-mobile.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img
+                  class="c-card-category__img"
+                  src="@img/hero/1x/1x-digital-transformation-desktop.jpg"
+                  loading="lazy"
+                  alt="Цифровая трансформация бизнеса Украины"
+                  width="1272"
+                  height="466"
+                />
+              </picture>
+              <div
+                class="c-card-category__content c-card-category__content--w--610"
+              >
+                <h2
+                  class="c-card-category__title c-card-category__title--mb--20"
+                >
+                  <a
+                    class="c-card-category__link c-card-category__link--typography u-link"
+                    href="#"
+                    >Цифровая трансформация бизнеса Украины</a
+                  >
+                </h2>
+                <p
+                  class="c-card-category__text c-card-category__text--typography"
+                >
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex
+                  sapiente quos perferendis ab commodi. Delectus, accusantium
+                  commodi ad temporibus ex ea necessitatibus adipisci!
+                </p>
+              </div>
+              <div class="c-card-category__progress c-progress"></div>
+            </article>
+          </li>
           <li class="c-slider-hero__item">
             <article class="c-card-category">
               <a
@@ -352,7 +452,7 @@
                   обязанности возлагаются на супругу главы государства в Украине
                 </p>
               </div>
-              <div class="c-card-category__progress c-progress-loading"></div>
+              <div class="c-card-category__progress c-progress"></div>
             </article>
           </li>
           <li class="c-slider-hero__item">
@@ -452,7 +552,7 @@
                   commodi ad temporibus ex ea necessitatibus adipisci!
                 </p>
               </div>
-              <div class="c-card-category__progress c-progress-loading"></div>
+              <div class="c-card-category__progress c-progress"></div>
             </article>
           </li>
           <li class="c-slider-hero__item">
@@ -552,7 +652,7 @@
                   commodi ad temporibus ex ea necessitatibus adipisci!
                 </p>
               </div>
-              <div class="c-card-category__progress c-progress-loading"></div>
+              <div class="c-card-category__progress c-progress"></div>
             </article>
           </li>
           <li class="c-slider-hero__item">
@@ -652,7 +752,108 @@
                   commodi ad temporibus ex ea necessitatibus adipisci!
                 </p>
               </div>
-              <div class="c-card-category__progress c-progress-loading"></div>
+              <div class="c-card-category__progress c-progress"></div>
+            </article>
+          </li>
+          <li class="c-slider-hero__item">
+            <article class="c-card-category">
+              <a
+                class="c-card-category__category c-card-category__category--mb--20 c-link-category c-link-category--lite"
+                href="#"
+                >Политика</a
+              >
+              <picture class="c-card-category__picture u-picture-absolute">
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-desktop.webp 1x,
+                    @img/hero/2x/2x-lady-in-law-desktop.webp 2x
+                  "
+                  media="(min-width: 1440px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-desktop.jpg 1x,
+                    @img/hero/2x/2x-lady-in-law-desktop.jpg 2x
+                  "
+                  media="(min-width: 1440px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-small-desktop.webp 1x,
+                    @img/hero/2x/2x-lady-in-law-small-desktop.webp 2x
+                  "
+                  media="(min-width: 1024px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-small-desktop.jpg 1x,
+                    @img/hero/2x/2x-lady-in-law-small-desktop.jpg 2x
+                  "
+                  media="(min-width: 1024px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-tablet.webp 1x,
+                    @img/hero/2x/2x-lady-in-law-tablet.webp 2x
+                  "
+                  media="(min-width: 481px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-tablet.jpg 1x,
+                    @img/hero/2x/2x-lady-in-law-tablet.jpg 2x
+                  "
+                  media="(min-width: 481px)"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-mobile.webp 1x,
+                    @img/hero/2x/2x-lady-in-law-mobile.webp 2x
+                  "
+                  media="(max-width: 480px)"
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/hero/1x/1x-lady-in-law-mobile.jpg 1x,
+                    @img/hero/2x/2x-lady-in-law-mobile.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img
+                  class="c-card-category__img"
+                  src="@img/hero/1x/1x-lady-in-law-desktop.jpg"
+                  alt="Леди в законе. Особый статус для жены президетна"
+                  width="1272"
+                  height="466"
+                />
+              </picture>
+              <div
+                class="c-card-category__content c-card-category__content--w--610"
+              >
+                <h2
+                  class="c-card-category__title c-card-category__title--mb--20"
+                >
+                  <a
+                    class="c-card-category__link c-card-category__link--typography u-link"
+                    href="#"
+                  >
+                    Леди в законе. Зачем Зеленскому понадобился особый статус
+                    для жены президента
+                  </a>
+                </h2>
+                <p
+                  class="c-card-category__text c-card-category__text--typography"
+                >
+                  Владимир Зеленский загорелся идеей разработки закона о первой
+                  леди. Для чего ему это понадобилось, и какие права и
+                  обязанности возлагаются на супругу главы государства в Украине
+                </p>
+              </div>
+              <div class="c-card-category__progress c-progress"></div>
             </article>
           </li>
         </ul>

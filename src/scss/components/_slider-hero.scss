@@ -1,9 +1,15 @@
+.c-slider-hero {
+  user-select: none;
+  touch-action: pan-y pinch-zoom;
+}
+
 .c-slider-hero__container {
   overflow: hidden;
 }
 
 .c-slider-hero__list {
   display: flex;
+  transform: translateX(-100%);
 }
 
 .c-slider-hero__item {

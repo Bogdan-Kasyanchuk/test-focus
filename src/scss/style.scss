@@ -4,6 +4,7 @@
 @import './utils/breakpoints';
 @import './utils/variables';
 @import './utils/colors';
+@import './utils/progress-loading';
 @import './utils/link';
 @import './utils/picture-absolute';
 @import './utils/visually-hidden';
@@ -23,7 +24,7 @@
 @import './components/backdrop';
 @import './components/button';
 @import './components/card-tab-hero';
-@import './components/progress-loading';
+@import './components/progress';
 @import './components/card-category';
 @import './components/slider-hero';
 @import './components/grid-list';

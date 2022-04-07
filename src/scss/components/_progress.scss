@@ -1,0 +1,14 @@
+.u-progress-loading {
+  pointer-events: none;
+  animation: loader 5000ms $function;
+}
+
+@keyframes loader {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
