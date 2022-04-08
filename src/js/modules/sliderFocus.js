@@ -3,18 +3,18 @@ import refs from '../refs.js';
 const { sliderFocusEl } = refs;
 
 addEventListener('DOMContentLoaded', () => {
-  sliderFocusEl.addEventListener('pointerdown', handlerSliderFocus);
+  sliderFocusEl.addEventListener('pointerdown', handlerSlider);
   sliderFocusEl.addEventListener('pointerover', сhangeSlidesIntervalStop);
   addEventListener('unload', clearListener);
   сhangeSlidesIntervalStart();
 });
 
-const sliderFocusList = sliderFocusEl.firstElementChild.firstElementChild;
-const sliderFocusItems = sliderFocusList.children;
+const sliderList = sliderFocusEl.firstElementChild.firstElementChild;
+const sliderItems = sliderList.children;
 const widthSlide = 100;
-let index = 1;
-let x1 = null;
+let indexSlide = 1;
 let clientWidth = null;
+let x = null;
 let swipeX = null;
 let intervalId = null;
 
@@ -22,6 +22,7 @@ function сhangeSlidesIntervalStart() {
   intervalId = setInterval(() => {
     nextSlide();
   }, 5000);
+
   sliderFocusEl.removeEventListener('pointerout', сhangeSlidesIntervalStart);
 }
 
@@ -30,17 +31,17 @@ function сhangeSlidesIntervalStop() {
   sliderFocusEl.addEventListener('pointerout', сhangeSlidesIntervalStart);
 }
 
-const swipeXPercent = () => (swipeX / clientWidth) * 100;
-
 const transitionSlide = transitionValue =>
-  (sliderFocusList.style.transition = transitionValue);
+  (sliderList.style.transition = transitionValue);
 
 const transformSlide = (swipeValue = 0) =>
-  (sliderFocusList.style.transform = `translateX(${
-    -(widthSlide * index) + swipeValue
+  (sliderList.style.transform = `translateX(${
+    -(widthSlide * indexSlide) + swipeValue
   }%)`);
 
-function handlerSliderFocus(event) {
+const swipeXPercent = () => (swipeX / clientWidth) * 100;
+
+function handlerSlider(event) {
   if (event.target.nodeName === 'BUTTON') {
     if (event.target.attributes[2].value === 'Previous') {
       prevSlide();
@@ -55,23 +56,23 @@ function handlerSliderFocus(event) {
 
 function startSwipe(event) {
   sliderFocusEl.ondragstart = () => false;
-  x1 = event.pageX;
   clientWidth = event.currentTarget.clientWidth;
+  x = event.pageX;
   sliderFocusEl.addEventListener('pointermove', swiping);
   sliderFocusEl.addEventListener('pointerup', stopSwipe);
   sliderFocusEl.addEventListener('pointercancel', stopSwipe);
 }
 
 function swiping(event) {
-  swipeX = event.pageX - x1;
+  swipeX = event.pageX - x;
   transitionSlide('none');
   transformSlide(swipeXPercent());
 }
 
 function stopSwipe() {
-  if (swipeXPercent() >= 50) {
+  if (swipeXPercent() >= widthSlide / 2) {
     prevSlide();
-  } else if (swipeXPercent() <= -50) {
+  } else if (swipeXPercent() <= -widthSlide / 2) {
     nextSlide();
   } else {
     transitionSlide('transform 250ms ease-in-out');
@@ -85,38 +86,37 @@ function stopSwipe() {
 }
 
 function prevSlide() {
-  index -= 1;
+  indexSlide -= 1;
   transitionSlide('transform 250ms ease-in-out');
   transformSlide();
 
-  if (index === 0) {
-    index = sliderFocusItems.length - 2;
-    sliderFocusList.addEventListener('transitionend', firstLastSlideSwitching);
+  if (indexSlide === 0) {
+    indexSlide = sliderItems.length - 2;
+    sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 }
 
 function nextSlide() {
-  transitionSlide('transform 250ms ease-in-out');
-
-  if (index < sliderFocusItems.length - 1) {
-    index += 1;
+  if (indexSlide < sliderItems.length - 1) {
+    indexSlide += 1;
+    transitionSlide('transform 250ms ease-in-out');
     transformSlide();
   }
 
-  if (index === sliderFocusItems.length - 1) {
-    index = 1;
-    sliderFocusList.addEventListener('transitionend', firstLastSlideSwitching);
+  if (indexSlide === sliderItems.length - 1) {
+    indexSlide = 1;
+    sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 }
 
 function firstLastSlideSwitching() {
   transitionSlide('none');
   transformSlide();
-  sliderFocusList.removeEventListener('transitionend', firstLastSlideSwitching);
+  sliderList.removeEventListener('transitionend', firstLastSlideSwitching);
 }
 
 function clearListener() {
   clearInterval(intervalId);
-  sliderFocusEl.removeEventListener('pointerdown', handlerSliderFocus);
+  sliderFocusEl.removeEventListener('pointerdown', handlerSlider);
   sliderFocusEl.removeEventListener('pointerover', сhangeSlidesIntervalStop);
 }

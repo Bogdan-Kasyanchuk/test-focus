@@ -3,22 +3,22 @@ import refs from '../refs.js';
 const { sliderHeroEl, sliderTabHeroEl } = refs;
 
 addEventListener('DOMContentLoaded', () => {
-  sliderTabHeroEl.addEventListener('click', handlerTabHero);
-  sliderHeroEl.addEventListener('pointerdown', handlerSliderHero);
+  sliderTabHeroEl.addEventListener('click', handlerTab);
+  sliderHeroEl.addEventListener('pointerdown', handlerSlider);
   sliderHeroEl.addEventListener('pointerover', сhangeSlidesIntervalStop);
   addEventListener('unload', clearListener);
   сhangeSlidesIntervalStart();
 });
 
-const sliderHeroList = sliderHeroEl.firstElementChild.firstElementChild;
-const sliderHeroItems = sliderHeroList.children;
+const sliderList = sliderHeroEl.firstElementChild.firstElementChild;
+const sliderItems = sliderList.children;
 const widthSlide = 100;
 let indexSlide = 1;
-let x1 = null;
+let indexTab = 1;
 let clientWidth = null;
+let x = null;
 let swipeX = null;
 let intervalId = null;
-let indexTab = 1;
 let prevProgressTab = null;
 let prevProgressSlide = null;
 
@@ -26,7 +26,7 @@ function сhangeSlidesIntervalStart() {
   addProgressSlide();
 
   intervalId = setInterval(() => {
-    if (indexTab >= sliderHeroItems.length - 2) {
+    if (indexTab >= sliderItems.length - 2) {
       indexTab = 1;
     } else {
       indexTab += 1;
@@ -43,25 +43,22 @@ function сhangeSlidesIntervalStop() {
   sliderHeroEl.addEventListener('pointerout', сhangeSlidesIntervalStart);
 }
 
-const swipeXPercent = () => (swipeX / clientWidth) * 100;
-
 const transitionSlide = transitionValue =>
-  (sliderHeroList.style.transition = transitionValue);
+  (sliderList.style.transition = transitionValue);
 
 const transformSlide = (swipeValue = 0) =>
-  (sliderHeroList.style.transform = `translateX(${
+  (sliderList.style.transform = `translateX(${
     -(widthSlide * indexSlide) + swipeValue
   }%)`);
+
+const swipeXPercent = () => (swipeX / clientWidth) * 100;
 
 const addProgressSlide = () => {
   const progressTab =
     sliderTabHeroEl.children[indexTab - 1].lastElementChild.lastElementChild;
-  const progressSlide =
-    sliderHeroItems[indexTab].lastElementChild.lastElementChild;
-
+  const progressSlide = sliderItems[indexTab].lastElementChild.lastElementChild;
   progressTab.classList.add('u-progress-loading');
   progressSlide.classList.add('u-progress-loading');
-
   prevProgressTab = progressTab;
   prevProgressSlide = progressSlide;
 };
@@ -71,7 +68,7 @@ const removeProgressSlide = () => {
   prevProgressSlide.classList.remove('u-progress-loading');
 };
 
-function handlerTabHero(event) {
+function handlerTab(event) {
   if (!event.target.classList.contains('c-card-tab-hero')) {
     return;
   }
@@ -92,40 +89,40 @@ function handlerTabHero(event) {
   }
 }
 
-function handlerSliderHero(event) {
+function handlerSlider(event) {
   removeProgressSlide();
   startSwipe(event);
 }
 
 function startSwipe(event) {
   sliderHeroEl.ondragstart = () => false;
-  x1 = event.pageX;
   clientWidth = event.currentTarget.clientWidth;
+  x = event.pageX;
   sliderHeroEl.addEventListener('pointermove', swiping);
   sliderHeroEl.addEventListener('pointerup', stopSwipe);
   sliderHeroEl.addEventListener('pointercancel', stopSwipe);
 }
 
 function swiping(event) {
-  swipeX = event.pageX - x1;
+  swipeX = event.pageX - x;
   transitionSlide('none');
   transformSlide(swipeXPercent());
 }
 
 function stopSwipe(event) {
-  const index = [...sliderHeroItems].findIndex(
+  const index = [...sliderItems].findIndex(
     el => el === event.target.parentNode,
   );
 
-  if (swipeXPercent() >= 50) {
+  if (swipeXPercent() >= widthSlide / 2) {
     if (index <= 1) {
-      indexTab = sliderHeroItems.length - 2;
+      indexTab = sliderItems.length - 2;
     } else {
       indexTab = index - 1;
     }
     prevSlide();
-  } else if (swipeXPercent() <= -50) {
-    if (index >= sliderHeroItems.length - 2) {
+  } else if (swipeXPercent() <= -widthSlide / 2) {
+    if (index >= sliderItems.length - 2) {
       indexTab = 1;
     } else {
       indexTab = index + 1;
@@ -148,8 +145,8 @@ function prevSlide() {
   transformSlide();
 
   if (indexSlide === 0) {
-    indexSlide = sliderHeroItems.length - 2;
-    sliderHeroList.addEventListener('transitionend', firstLastSlideSwitching);
+    indexSlide = sliderItems.length - 2;
+    sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 
   removeProgressSlide();
@@ -157,16 +154,15 @@ function prevSlide() {
 }
 
 function nextSlide() {
-  transitionSlide('transform 250ms ease-in-out');
-
-  if (indexSlide < sliderHeroItems.length - 1) {
+  if (indexSlide < sliderItems.length - 1) {
     indexSlide += 1;
+    transitionSlide('transform 250ms ease-in-out');
     transformSlide();
   }
 
-  if (indexSlide === sliderHeroItems.length - 1) {
+  if (indexSlide === sliderItems.length - 1) {
     indexSlide = 1;
-    sliderHeroList.addEventListener('transitionend', firstLastSlideSwitching);
+    sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 
   removeProgressSlide();
@@ -176,11 +172,11 @@ function nextSlide() {
 function firstLastSlideSwitching() {
   transitionSlide('none');
   transformSlide();
-  sliderHeroList.removeEventListener('transitionend', firstLastSlideSwitching);
+  sliderList.removeEventListener('transitionend', firstLastSlideSwitching);
 }
 
 function clearListener() {
   clearInterval(intervalId);
-  sliderHeroEl.removeEventListener('pointerdown', handlerSliderHero);
+  sliderHeroEl.removeEventListener('pointerdown', handlerSlider);
   sliderHeroEl.removeEventListener('pointerover', сhangeSlidesIntervalStop);
 }

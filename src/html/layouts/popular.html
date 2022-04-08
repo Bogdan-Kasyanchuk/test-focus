@@ -1,7 +1,7 @@
 <section class="b-popular">
   <div class="c-container">
     <h2 class="b-popular__title c-title">Сейчас популярно</h2>
-    <div class="c-slider-popular">
+    <div class="c-slider-popular js-slider-popular">
       <div class="c-slider-popular__container">
         <ul class="c-slider-popular__list">
           <li class="c-slider-popular__item">
@@ -37,7 +37,7 @@
                 />
               </picture>
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a
@@ -65,7 +65,7 @@
                 >Мир</a
               >
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a
@@ -93,7 +93,7 @@
                 >Мир</a
               >
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a class="c-card-category-small__link u-link" href="#">
@@ -140,7 +140,7 @@
                 />
               </picture>
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a
@@ -191,7 +191,7 @@
                 />
               </picture>
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a
@@ -219,7 +219,7 @@
                 >Мир</a
               >
               <div
-                class="c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
               >
                 <h3 class="c-card-category-small__title">
                   <a
@@ -229,6 +229,81 @@
                     Австралиец выловил рекордного красного императора и решил
                     передать его ученым</a
                   >
+                </h3>
+                <time
+                  class="c-card-category-small__time c-card-category-small__time--lite"
+                  >15:44</time
+                >
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item">
+            <article
+              class="c-card-category-small c-card-category-small--padding--lr15 c-card-category-small--bgc--lite"
+            >
+              <a
+                class="c-card-category-small__category c-card-category-small__category--absolute--top c-link-category"
+                href="#"
+                >Мир</a
+              >
+              <div
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+              >
+                <h3 class="c-card-category-small__title">
+                  <a class="c-card-category-small__link u-link" href="#">
+                    Жизнь за 80. 5 самых пожилых рекорсменов из Книги рекордов
+                    Гиннеса</a
+                  >
+                </h3>
+                <time class="c-card-category-small__time">15:44</time>
+              </div>
+            </article>
+          </li>
+          <li class="c-slider-popular__item">
+            <article
+              class="c-card-category-small c-card-category-small--padding--lr15"
+            >
+              <a
+                class="c-card-category-small__category c-card-category-small__category--absolute--top c-link-category c-link-category--lite"
+                href="#"
+                >Мир</a
+              >
+              <picture
+                class="c-card-category-small__picture c-card-category-small__picture--absolute"
+              >
+                <source
+                  srcset="
+                    @img/popular/1x/1x-dress-code.webp 1x,
+                    @img/popular/2x/2x-dress-code.webp 2x
+                  "
+                  type="image/webp"
+                />
+                <source
+                  srcset="
+                    @img/popular/1x/1x-dress-code.jpg 1x,
+                    @img/popular/2x/2x-dress-code.jpg 2x
+                  "
+                />
+                <img
+                  class="c-card-category-small__img"
+                  src="@img/popular/1x/1x-dress-code.jpg"
+                  loading="lazy"
+                  alt="Дресс-код постапокалипсиса"
+                  width="300"
+                  height="292"
+                />
+              </picture>
+              <div
+                class="c-slider-popular__item-content c-card-category-small__content c-card-category-small__content--jc--end c-card-category-small__content--relative c-card-category-small__content--plr--15"
+              >
+                <h3 class="c-card-category-small__title">
+                  <a
+                    class="c-card-category-small__link c-card-category-small__link--lite u-link"
+                    href="#"
+                  >
+                    Дресс-код постапокалипсиса. Как коронавирус и карантин
+                    навсегда изменили стиль
+                  </a>
                 </h3>
                 <time
                   class="c-card-category-small__time c-card-category-small__time--lite"
