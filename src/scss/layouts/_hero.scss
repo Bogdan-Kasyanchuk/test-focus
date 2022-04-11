@@ -5,6 +5,7 @@
 
 .b-hero__tab-list {
   display: none;
+  user-select: none;
 
   @include min-tablet {
     display: flex;

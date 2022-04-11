@@ -2,7 +2,6 @@
   position: relative;
   user-select: none;
   touch-action: pan-y pinch-zoom;
-  cursor: pointer;
 }
 
 .c-slider-ratings__container {
@@ -22,10 +21,6 @@
     min-width: 408px;
     min-height: 514px;
   }
-}
-
-.c-slider-ratings__item-content {
-  pointer-events: none;
 }
 
 .c-slider-ratings__button-arrow {

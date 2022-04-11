@@ -2,33 +2,38 @@ import refs from '../refs.js';
 
 const { sliderFocusEl } = refs;
 
-addEventListener('DOMContentLoaded', () => {
-  sliderFocusEl.addEventListener('pointerdown', handlerSlider);
-  sliderFocusEl.addEventListener('pointerover', сhangeSlidesIntervalStop);
-  addEventListener('unload', clearListener);
-  сhangeSlidesIntervalStart();
-});
-
 const sliderList = sliderFocusEl.firstElementChild.firstElementChild;
 const sliderItems = sliderList.children;
 const widthSlide = 100;
 let indexSlide = 1;
+let isSwipe = false;
 let clientWidth = null;
 let x = null;
 let swipeX = null;
 let intervalId = null;
+let link = null;
 
-function сhangeSlidesIntervalStart() {
+export function сhangeSlidesIntervalStartFocus() {
   intervalId = setInterval(() => {
     nextSlide();
   }, 5000);
 
-  sliderFocusEl.removeEventListener('pointerout', сhangeSlidesIntervalStart);
+  sliderFocusEl.removeEventListener(
+    'pointerout',
+    сhangeSlidesIntervalStartFocus,
+  );
 }
 
-function сhangeSlidesIntervalStop() {
+export function сhangeSlidesIntervalStopFocus() {
   clearInterval(intervalId);
-  sliderFocusEl.addEventListener('pointerout', сhangeSlidesIntervalStart);
+  sliderFocusEl.addEventListener('pointerout', handlerPointerOut);
+}
+
+function handlerPointerOut() {
+  сhangeSlidesIntervalStartFocus();
+  if (Math.abs(swipeX)) {
+    stopSwipe();
+  }
 }
 
 const transitionSlide = transitionValue =>
@@ -41,7 +46,7 @@ const transformSlide = (swipeValue = 0) =>
 
 const swipeXPercent = () => (swipeX / clientWidth) * 100;
 
-function handlerSlider(event) {
+export function handlerSliderFocus(event) {
   if (event.target.nodeName === 'BUTTON') {
     if (event.target.attributes[2].value === 'Previous') {
       prevSlide();
@@ -51,22 +56,31 @@ function handlerSlider(event) {
     return;
   }
 
-  startSwipe(event);
-}
-
-function startSwipe(event) {
-  sliderFocusEl.ondragstart = () => false;
   clientWidth = event.currentTarget.clientWidth;
   x = event.pageX;
+  sliderFocusEl.ondragstart = () => false;
   sliderFocusEl.addEventListener('pointermove', swiping);
   sliderFocusEl.addEventListener('pointerup', stopSwipe);
-  sliderFocusEl.addEventListener('pointercancel', stopSwipe);
 }
 
 function swiping(event) {
   swipeX = event.pageX - x;
   transitionSlide('none');
   transformSlide(swipeXPercent());
+
+  if (Math.abs(swipeX) > 1 && !isSwipe) {
+    if (event.target.nodeName === 'A') {
+      link = event.target;
+    }
+    link.addEventListener('click', preventDefaultLink, {
+      once: true,
+    });
+    isSwipe = true;
+  }
+}
+
+function preventDefaultLink(event) {
+  event.preventDefault();
 }
 
 function stopSwipe() {
@@ -80,9 +94,9 @@ function stopSwipe() {
   }
 
   swipeX = null;
+  isSwipe = false;
   sliderFocusEl.removeEventListener('pointermove', swiping);
   sliderFocusEl.removeEventListener('pointerup', stopSwipe);
-  sliderFocusEl.removeEventListener('pointercancel', stopSwipe);
 }
 
 function prevSlide() {
@@ -113,10 +127,4 @@ function firstLastSlideSwitching() {
   transitionSlide('none');
   transformSlide();
   sliderList.removeEventListener('transitionend', firstLastSlideSwitching);
-}
-
-function clearListener() {
-  clearInterval(intervalId);
-  sliderFocusEl.removeEventListener('pointerdown', handlerSlider);
-  sliderFocusEl.removeEventListener('pointerover', сhangeSlidesIntervalStop);
 }

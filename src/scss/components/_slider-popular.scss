@@ -2,7 +2,6 @@
   position: relative;
   user-select: none;
   touch-action: pan-y pinch-zoom;
-  cursor: pointer;
 }
 
 .c-slider-popular__container {
@@ -17,10 +16,6 @@
 .c-slider-popular__item {
   min-width: 300px;
   height: 292px;
-}
-
-.c-slider-popular__item-content {
-  pointer-events: none;
 }
 
 .c-slider-popular__button-arrow {

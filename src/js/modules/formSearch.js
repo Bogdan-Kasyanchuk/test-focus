@@ -1,15 +1,9 @@
 import refs from '../refs.js';
 import { burgerModal } from './burgerModal.js';
 
-const { backdropFormSearchEl, formSearchEl, buttonSearchEl, burgerModalEl } =
-  refs;
+const { backdropFormSearchEl, formSearchEl, burgerModalEl } = refs;
 
-addEventListener('DOMContentLoaded', () => {
-  buttonSearchEl.addEventListener('click', formSearch);
-  addEventListener('unload', clearListener);
-});
-
-function formSearch(event) {
+export function formSearch(event) {
   if (
     !event.target.classList.contains('c-backdrop') &&
     !event.target.classList.contains('c-button-search')
@@ -35,8 +29,4 @@ function formSearch(event) {
 function form(event) {
   event.preventDefault();
   console.log(event.target[0].value);
-}
-
-function clearListener() {
-  buttonSearchEl.removeEventListener('click', formSearch);
 }

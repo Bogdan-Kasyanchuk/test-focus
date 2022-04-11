@@ -2,11 +2,6 @@ import refs from '../refs.js';
 
 const { bodyEl, backdropBurgerModalEl, buttonBurgerEl, burgerModalEl } = refs;
 
-addEventListener('DOMContentLoaded', () => {
-  buttonBurgerEl.addEventListener('click', burgerModal);
-  addEventListener('unload', clearListener);
-});
-
 export function burgerModal(event) {
   if (
     !event.target.classList.contains('c-backdrop') &&
@@ -27,8 +22,4 @@ export function burgerModal(event) {
   } else {
     backdropBurgerModalEl.removeEventListener('click', burgerModal);
   }
-}
-
-function clearListener() {
-  buttonBurgerEl.removeEventListener('click', burgerModal);
 }

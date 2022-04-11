@@ -2,28 +2,25 @@ import refs from '../refs.js';
 
 const { sliderHeroEl, sliderTabHeroEl } = refs;
 
-addEventListener('DOMContentLoaded', () => {
-  sliderTabHeroEl.addEventListener('click', handlerTab);
-  sliderHeroEl.addEventListener('pointerdown', handlerSlider);
-  sliderHeroEl.addEventListener('pointerover', сhangeSlidesIntervalStop);
-  addEventListener('unload', clearListener);
-  сhangeSlidesIntervalStart();
-});
-
 const sliderList = sliderHeroEl.firstElementChild.firstElementChild;
 const sliderItems = sliderList.children;
 const widthSlide = 100;
 let indexSlide = 1;
 let indexTab = 1;
+let isSwipe = false;
 let clientWidth = null;
 let x = null;
 let swipeX = null;
 let intervalId = null;
-let prevProgressTab = null;
-let prevProgressSlide = null;
+let progressTab = null;
+let progressSlide = null;
+let link = null;
+let index = null;
 
-function сhangeSlidesIntervalStart() {
-  addProgressSlide();
+export function сhangeSlidesIntervalStartHero() {
+  if (!progressTab?.classList.contains('u-progress-loading')) {
+    addProgressSlide();
+  }
 
   intervalId = setInterval(() => {
     if (indexTab >= sliderItems.length - 2) {
@@ -34,13 +31,20 @@ function сhangeSlidesIntervalStart() {
     nextSlide();
   }, 5000);
 
-  sliderHeroEl.removeEventListener('pointerout', сhangeSlidesIntervalStart);
+  sliderHeroEl.removeEventListener('pointerout', сhangeSlidesIntervalStartHero);
 }
 
-function сhangeSlidesIntervalStop() {
+export function сhangeSlidesIntervalStopHero() {
   removeProgressSlide();
   clearInterval(intervalId);
-  sliderHeroEl.addEventListener('pointerout', сhangeSlidesIntervalStart);
+  sliderHeroEl.addEventListener('pointerout', handlerPointerOut);
+}
+
+function handlerPointerOut() {
+  сhangeSlidesIntervalStartHero();
+  if (Math.abs(swipeX)) {
+    stopSwipe();
+  }
 }
 
 const transitionSlide = transitionValue =>
@@ -54,25 +58,24 @@ const transformSlide = (swipeValue = 0) =>
 const swipeXPercent = () => (swipeX / clientWidth) * 100;
 
 const addProgressSlide = () => {
-  const progressTab =
+  progressTab =
     sliderTabHeroEl.children[indexTab - 1].lastElementChild.lastElementChild;
-  const progressSlide = sliderItems[indexTab].lastElementChild.lastElementChild;
+  progressSlide = sliderItems[indexTab].lastElementChild.lastElementChild;
   progressTab.classList.add('u-progress-loading');
   progressSlide.classList.add('u-progress-loading');
-  prevProgressTab = progressTab;
-  prevProgressSlide = progressSlide;
 };
 
 const removeProgressSlide = () => {
-  prevProgressTab.classList.remove('u-progress-loading');
-  prevProgressSlide.classList.remove('u-progress-loading');
+  progressTab.classList.remove('u-progress-loading');
+  progressSlide.classList.remove('u-progress-loading');
 };
 
-function handlerTab(event) {
+export function handlerTabHero(event) {
   if (!event.target.classList.contains('c-card-tab-hero')) {
     return;
   }
 
+  сhangeSlidesIntervalStopHero();
   indexTab =
     [...event.currentTarget.children].findIndex(
       el => el === event.target.parentNode,
@@ -87,33 +90,42 @@ function handlerTab(event) {
     indexSlide = indexTab - 1;
     nextSlide();
   }
+
+  сhangeSlidesIntervalStartHero();
 }
 
-function handlerSlider(event) {
-  removeProgressSlide();
-  startSwipe(event);
-}
-
-function startSwipe(event) {
-  sliderHeroEl.ondragstart = () => false;
+export function handlerSliderHero(event) {
   clientWidth = event.currentTarget.clientWidth;
   x = event.pageX;
+  sliderHeroEl.ondragstart = () => false;
   sliderHeroEl.addEventListener('pointermove', swiping);
   sliderHeroEl.addEventListener('pointerup', stopSwipe);
-  sliderHeroEl.addEventListener('pointercancel', stopSwipe);
 }
 
 function swiping(event) {
   swipeX = event.pageX - x;
   transitionSlide('none');
   transformSlide(swipeXPercent());
+
+  if (Math.abs(swipeX) > 1 && !isSwipe) {
+    index = [...sliderItems].findIndex(
+      el => el === event.target.offsetParent.parentNode,
+    );
+    if (event.target.nodeName === 'A') {
+      link = event.target;
+    }
+    link.addEventListener('click', preventDefaultLink, {
+      once: true,
+    });
+    isSwipe = true;
+  }
 }
 
-function stopSwipe(event) {
-  const index = [...sliderItems].findIndex(
-    el => el === event.target.parentNode,
-  );
+function preventDefaultLink(event) {
+  event.preventDefault();
+}
 
+function stopSwipe() {
   if (swipeXPercent() >= widthSlide / 2) {
     if (index <= 1) {
       indexTab = sliderItems.length - 2;
@@ -134,9 +146,9 @@ function stopSwipe(event) {
   }
 
   swipeX = null;
+  isSwipe = false;
   sliderHeroEl.removeEventListener('pointermove', swiping);
   sliderHeroEl.removeEventListener('pointerup', stopSwipe);
-  sliderHeroEl.removeEventListener('pointercancel', stopSwipe);
 }
 
 function prevSlide() {
@@ -149,7 +161,10 @@ function prevSlide() {
     sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 
-  removeProgressSlide();
+  if (progressTab.classList.contains('u-progress-loading')) {
+    removeProgressSlide();
+  }
+
   addProgressSlide();
 }
 
@@ -165,7 +180,10 @@ function nextSlide() {
     sliderList.addEventListener('transitionend', firstLastSlideSwitching);
   }
 
-  removeProgressSlide();
+  if (progressTab.classList.contains('u-progress-loading')) {
+    removeProgressSlide();
+  }
+
   addProgressSlide();
 }
 
@@ -173,10 +191,4 @@ function firstLastSlideSwitching() {
   transitionSlide('none');
   transformSlide();
   sliderList.removeEventListener('transitionend', firstLastSlideSwitching);
-}
-
-function clearListener() {
-  clearInterval(intervalId);
-  sliderHeroEl.removeEventListener('pointerdown', handlerSlider);
-  sliderHeroEl.removeEventListener('pointerover', сhangeSlidesIntervalStop);
 }
