@@ -10,12 +10,15 @@
 
 .c-slider-ratings__list {
   display: flex;
-  column-gap: 24px;
 }
 
 .c-slider-ratings__item {
   min-width: 300px;
   min-height: 378px;
+
+  &:not(:last-child) {
+    margin-right: 24px;
+  }
 
   @include min-desktop {
     min-width: 408px;
@@ -47,8 +50,4 @@
   @include min-desktop {
     right: -60px;
   }
-}
-
-.c-slider-ratings__scrollbar-drag {
-  width: 35%;
 }

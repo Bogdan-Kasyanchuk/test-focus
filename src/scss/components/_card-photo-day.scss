@@ -6,7 +6,7 @@
   @include min-tablet {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     padding-bottom: 75px;
     padding-left: 15px;
     border-bottom: none;
