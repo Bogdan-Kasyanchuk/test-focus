@@ -12,4 +12,5 @@
 .c-progress__scrollbar-drag {
   height: 100%;
   background-color: getColor('accent');
+  transition: width $time $function;
 }

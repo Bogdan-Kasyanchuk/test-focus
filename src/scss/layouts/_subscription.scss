@@ -5,13 +5,16 @@
 
 .b-subscription__wrapper {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  row-gap: 20px;
-  column-gap: 20px;
   padding: 15px;
   background-color: getColor('accent');
+
+  @include min-600 {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
 
   @include min-small-desktop {
     padding: 10px 20px;
@@ -24,16 +27,15 @@
 }
 
 .b-subscription__focus-list {
+  @include max-599 {
+    margin-bottom: 20px;
+  }
+
   @include min-small-desktop {
     position: relative;
     bottom: -10px;
     display: flex;
-    align-items: end;
-    column-gap: 10px;
-  }
-
-  @include min-desktop {
-    column-gap: 16px;
+    align-items: flex-end;
   }
 }
 
@@ -41,6 +43,14 @@
   &:not(:last-child) {
     @include max-tablet {
       display: none;
+    }
+
+    @include min-small-desktop {
+      margin-right: 10px;
+    }
+
+    @include min-desktop {
+      margin-right: 16px;
     }
   }
 }
@@ -50,12 +60,23 @@
 }
 
 .b-subscription__text-wrapper {
-  @include min-small-desktop {
-    max-width: 126px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @include min-600 {
+    flex-grow: 1;
+    flex-basis: 150px;
+    max-width: 256px;
+    margin-bottom: 0;
+  }
+
+  @include min-600-max-tablet {
+    padding-left: 12px;
+    padding-right: 12px;
   }
 
   @include min-desktop {
-    max-width: 256px;
+    text-align: left;
   }
 }
 

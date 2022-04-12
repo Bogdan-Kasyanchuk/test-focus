@@ -61,7 +61,7 @@
   "browserslist": [
     ">0.2%",
     "not dead",
-    "last 2 major versions"
+    "last 3 major versions"
   ],
   "lint-staged": {
     "*.js": [

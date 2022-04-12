@@ -8,6 +8,7 @@
   font-weight: 500;
   font-size: 20px;
   border: 1px solid getColor('basic');
+  border-radius: 0;
   transition: border-color $time $function;
 
   @include min-480 {

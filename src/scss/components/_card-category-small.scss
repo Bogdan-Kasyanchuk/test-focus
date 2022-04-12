@@ -32,7 +32,7 @@
 }
 
 .c-card-category-small__category--as--start {
-  align-self: start;
+  align-self: flex-start;
 }
 
 .c-card-category-small__picture--absolute {
@@ -51,7 +51,7 @@
 }
 
 .c-card-category-small__content--jc--end {
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 .c-card-category-small__content--relative {
